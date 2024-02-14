@@ -82,10 +82,10 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
                     <a href="{{url('/')}}" class="nav-item nav-link @yield('inicio')">Início</a>
-                    <a href="{{url('/produtos')}}" class="nav-item nav-link @yield('produtos')">Produtos</a>
+                    <!--<a href="{{url('/produtos')}}" class="nav-item nav-link @yield('produtos')">Produtos</a>-->
                     <a href="{{url('/sobrenos')}}" class="nav-item nav-link @yield('sobrenos')">Sobre Nós</a>
-                    <a href="{{url('/ondecomprar')}}" class="nav-item nav-link @yield('ondecomprar')">Onde Comprar</a>
-                    <a href="{{url('/clientes')}}" class="nav-item nav-link @yield('clientes')">Clientes</a>
+                    <!--<a href="{{url('/ondecomprar')}}" class="nav-item nav-link @yield('ondecomprar')">Onde Comprar</a>-->
+                    <!--<a href="{{url('/clientes')}}" class="nav-item nav-link @yield('clientes')">Clientes</a>-->
                     <!--                    <div class="nav-item dropdown">
                                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                             <div class="dropdown-menu bg-light m-0">
@@ -96,7 +96,7 @@
                                                 <a href="404.html" class="dropdown-item">404 Page</a>
                                             </div>
                                         </div>-->
-                    <a href="{{url('/contato')}}" class="nav-item nav-link">Contato</a>
+                    <!--<a href="{{url('/contato')}}" class="nav-item nav-link">Contato</a>-->
                 </div>
                 <a href="" class="btn btn-primary px-3 d-none d-lg-block">Chamar no WhatsApp</a>
             </div>
