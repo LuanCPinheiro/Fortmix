@@ -76,7 +76,9 @@ active
         <div class="col-md-4 col-l-4 wow fadeIn" data-wow-delay="0.1s">
             <div class="text-center border p-5">
                 <i class="fa fa-certificate fa-3x text-white mb-3"></i>
-                <h1 class="display-2 text-primary mb-0">Missão</h1>
+                <hr/>
+                <h1 class="display-2 text-secondary mb-0">Missão</h1>
+                <hr/>
                 <span class="fs-5 fw-semi-bold text-white">Compreender as tendências e as necessidades dos produtores e atuar para oferecer soluções em nutrição animal,
                     evoluindo com o desenvolvimento tecnológico da pecuária na geração de resultados econômicos, viabilizando a cadeia de produção da proteína animal.</span>
             </div>
@@ -87,7 +89,9 @@ active
         <div class="col-md-4 col-l-4 wow fadeIn" data-wow-delay="0.3s">
             <div class="text-center border p-5">
                 <i class="fa fa-users-cog fa-3x text-white mb-3"></i>
-                <h1 class="display-2 text-primary mb-0">Visão</h1>
+                <hr/>
+                <h1 class="display-2 text-secondary mb-0">Visão</h1>
+                <hr/>
                 <span class="fs-5 fw-semi-bold text-white">Ser referência no mercado como industria de produtos com qualidade, segurança e responsabidade em nutrição animal</span>
             </div>
         </div>
@@ -97,7 +101,9 @@ active
         <div class="col-md-4 col-l-4 wow fadeIn" data-wow-delay="0.5s">
             <div class="text-center border p-5">
                 <i class="fa fa-users fa-3x text-white mb-3"></i>
-                <h1 class="display-2 text-primary mb-0">Valores</h1>
+                <hr/>
+                <h1 class="display-2 text-secondary mb-0">Valores</h1>
+                <hr/>
                 <span class="fs-5 fw-semi-bold text-white">Qualidade, Seriedade, Padrões, Excelência</span>
             </div>
         </div>
@@ -129,7 +135,7 @@ active
                 </p>
                 <div class="d-flex align-items-center mb-4">
                     <div class="flex-shrink-0 bg-primary p-4">
-                        <h1 class="display-2">20</h1>
+                        <h1 class="display-2 text-white">20</h1>
                         <h5 class="text-white">Anos de</h5>
                         <h5 class="text-white">Tradição</h5>
                     </div>

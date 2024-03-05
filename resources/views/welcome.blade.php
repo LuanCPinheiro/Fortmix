@@ -41,7 +41,7 @@ active
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-10 text-start">
-                                <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">10 anos de experiência
+                                <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">20 anos de experiência
                                     entregando qualidade</p>
                                 <h1 class="display-1 text-white mb-5 animated slideInRight">Produtos de Qualidade Comprovada!</h1>
                                 <a href="" class="btn btn-primary py-3 px-5 animated slideInRight">Ver Produtos</a>
@@ -56,7 +56,7 @@ active
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-10 text-start">
-                                <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">10 anos de experiência
+                                <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">20 anos de experiência
                                     proporcionando resultados ao pecuarista</p>
                                 <h1 class="display-1 text-white mb-5 animated slideInRight">FortMix: Tradição, Parceria e Qualidade!</h1>
                                 <a href="" class="btn btn-primary py-3 px-5 animated slideInRight">Sobre Nós</a>
@@ -103,7 +103,7 @@ active
                 </p>
                 <div class="d-flex align-items-center mb-4">
                     <div class="flex-shrink-0 bg-primary p-4">
-                        <h1 class="display-2">20</h1>
+                        <h1 class="display-1 text-white">20</h1>
                         <h5 class="text-white">Anos de</h5>
                         <h5 class="text-white">Tradição</h5>
                     </div>
@@ -154,7 +154,7 @@ active
                 <i class="fa fa-certificate fa-3x text-white mb-3"></i>
                 <br/>
                 <span class="fs-5 fw-semi-bold text-white">Temos</span>
-                <h1 class="display-2 text-primary mb-0" data-toggle="counter-up">20</h1>
+                <h1 class="display-2 text-secondary mb-0" data-toggle="counter-up">20</h1>
                 <span class="fs-5 fw-semi-bold text-white">Anos de<br/>Experiência</span>
             </div>
         </div>
@@ -163,7 +163,7 @@ active
                 <i class="fa fa-users-cog fa-3x text-white mb-3"></i>
                 <br/>
                 <span class="fs-5 fw-semi-bold text-white">Somos mais de</span>
-                <h1 class="display-2 text-primary mb-0" data-toggle="counter-up">20</h1>
+                <h1 class="display-2 text-secondary mb-0" data-toggle="counter-up">20</h1>
                 <span class="fs-5 fw-semi-bold text-white">Membros na<br/>Equipe</span>
             </div>
         </div>
@@ -172,7 +172,7 @@ active
                 <i class="fa fa-users fa-3x text-white mb-3"></i>
                 <br/>
                 <span class="fs-5 fw-semi-bold text-white">Total de mais de</span>
-                <h1 class="display-2 text-primary mb-0" data-toggle="counter-up">1000</h1>
+                <h1 class="display-2 text-secondary mb-0" data-toggle="counter-up">1000</h1>
                 <span class="fs-5 fw-semi-bold text-white">Clientes<br/>Satisfeitos</span>
             </div>
         </div>
@@ -181,7 +181,7 @@ active
                 <i class="fa fa-check-double fa-3x text-white mb-3"></i>
                 <br/>
                 <span class="fs-5 fw-semi-bold text-white">E mais de</span>
-                <h1 class="display-2 text-primary mb-0" data-toggle="counter-up">30</h1>
+                <h1 class="display-2 text-secondary mb-0" data-toggle="counter-up">30</h1>
                 <span class="fs-5 fw-semi-bold text-white">Produtos no<br/>Catálogo</span>
             </div>
         </div>

@@ -22,6 +22,22 @@ Route::get('/sobrenos', function () {
     return view('sobrenos');
 });
 
+Route::get('/ondecomprar', function () {
+    return view('ondecomprar');
+});
+
+Route::get('/contato', function () {
+    return view('contato');
+});
+
+//Route::get('/produtos', function () {
+//    return view('produtos');
+//});
+
+Route::get('/clientes', function () {
+    return view('clientes');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

@@ -96,9 +96,9 @@
                                                 <a href="404.html" class="dropdown-item">404 Page</a>
                                             </div>
                                         </div>-->
-                    <!--<a href="{{url('/contato')}}" class="nav-item nav-link">Contato</a>-->
+                    <a href="{{url('/contato')}}" class="nav-item nav-link">Contato</a>
                 </div>
-                <a href="" class="btn btn-primary px-3 d-none d-lg-block">Chamar no WhatsApp</a>
+                <a href="https://api.whatsapp.com/send?phone=5567981539267&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site." class="btn btn-primary px-3 d-none d-lg-block">Chamar no WhatsApp</a>
             </div>
         </nav>
         <!-- Navbar End -->
