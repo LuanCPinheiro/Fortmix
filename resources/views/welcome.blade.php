@@ -476,7 +476,7 @@ active
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="team-item">
-                    <img class="img-fluid" src="img/team-3.jpg" alt="">
+                    <img class="img-fluid" src="img/team-4.jpg" alt="">
                     <div class="d-flex">
                         <div class="flex-shrink-0 btn-square bg-primary" style="width: 90px; height: 90px;">
                             <i class="fa fa-2x fa-share text-white"></i>
