@@ -116,7 +116,7 @@ active
                     </div>
                 </div>
                 <div class="row pt-2">
-                    <div class="col-sm-6">
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=5567981539267&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site." class="col-sm-6">
                         <div class="d-flex align-items-center">
                             <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
                                 <i class="fa-brands fa-whatsapp text-white"></i>
@@ -126,8 +126,8 @@ active
                                 <h5 class="mb-0">(67) 98153-9267</h5>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
+                    </a>
+                    <a target="_blank" href="tel:+556735963498" class="col-sm-6">
                         <div class="d-flex align-items-center">
                             <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
                                 <i class="fa fa-phone-alt text-white"></i>
@@ -137,7 +137,7 @@ active
                                 <h5 class="mb-0">(67) 3030-9999</h5>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
