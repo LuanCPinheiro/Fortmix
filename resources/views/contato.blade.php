@@ -42,7 +42,7 @@ active
                     </div>
                     <h4 class="mb-3">Telefone</h4>
                     <p class="mb-2">(67) 3596-3498</p>
-                    <a class="btn btn-primary px-4" href="tel:+556735963498">Ligar</a>
+                    <a target="_blank" class="btn btn-primary px-4" href="tel:+556735963498">Ligar</a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -52,7 +52,7 @@ active
                     </div>
                     <h4 class="mb-3">WhatsApp</h4>
                     <p class="mb-2">(67) 98153-9267</p>
-                    <a class="btn btn-primary px-4" href="https://api.whatsapp.com/send?phone=5567981539267&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site.">Enviar mensagem</a>
+                    <a target="_blank" class="btn btn-primary px-4" href="https://api.whatsapp.com/send?phone=5567981539267&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site.">Enviar mensagem</a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -62,7 +62,7 @@ active
                     </div>
                     <h4 class="mb-3">Email</h4>
                     <p class="mb-2">contato@fortmixnutricao.com.br</p>
-                    <a class="btn btn-primary px-4" href="mailto:contato@fortmixnutricao.com.br">Enviar e-mail</a>
+                    <a target="_blank" class="btn btn-primary px-4" href="mailto:contato@fortmixnutricao.com.br">Enviar e-mail</a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -72,7 +72,7 @@ active
                     </div>
                     <h4 class="mb-3">Endereço</h4>
                     <p class="mb-4">Avenida Adilson Romano Machado, 50 - Dist. Industrial, Cassilândia - MS, 79540-000</p>
-                    <a class="btn btn-primary px-4" href="https://maps.app.goo.gl/XCUmRdKnPKZwANN96" target="blank">Como chegar</a>
+                    <a target="_blank" class="btn btn-primary px-4" href="https://maps.app.goo.gl/XCUmRdKnPKZwANN96" target="blank">Como chegar</a>
                 </div>
             </div>
         </div>

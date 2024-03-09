@@ -44,7 +44,7 @@ active
                                 <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">20 anos de experiência
                                     entregando qualidade</p>
                                 <h1 class="display-1 text-white mb-5 animated slideInRight">Produtos de Qualidade Comprovada!</h1>
-                                <a href="" class="btn btn-primary py-3 px-5 animated slideInRight">Ver Produtos</a>
+                                <a href="/contato" class="btn btn-primary py-3 px-5 animated slideInRight">Entrar em contato</a>
                             </div>
                         </div>
                     </div>
@@ -59,7 +59,7 @@ active
                                 <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">20 anos de experiência
                                     proporcionando resultados ao pecuarista</p>
                                 <h1 class="display-1 text-white mb-5 animated slideInRight">FortMix: Tradição, Parceria e Qualidade!</h1>
-                                <a href="" class="btn btn-primary py-3 px-5 animated slideInRight">Sobre Nós</a>
+                                <a href="/sobrenos" class="btn btn-primary py-3 px-5 animated slideInRight">Sobre Nós</a>
                             </div>
                         </div>
                     </div>
@@ -200,9 +200,9 @@ active
 <!--                            <span
                         class="position-absolute top-50 start-100 translate-middle bg-white rounded-circle d-none d-lg-block"
                         style="width: 120px; height: 120px;"></span>-->
-                    <button type="button" class="btn-play">
+                    <a href="https://api.whatsapp.com/send?phone=5567981539267&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site." target="_blank" type="button" class="btn-play">
                         <span class="fa-brands fa-whatsapp text-white"></span>
-                    </button>
+                    </a>
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -254,7 +254,7 @@ active
 
 
 <!-- Video Modal Start -->
-<div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+<!--<div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content rounded-0">
@@ -263,7 +263,7 @@ active
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <!-- 16:9 aspect ratio -->
+                 16:9 aspect ratio 
                 <div class="ratio ratio-16x9">
                     <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
                             allowscriptaccess="always" allow="autoplay"></iframe>
@@ -271,7 +271,7 @@ active
             </div>
         </div>
     </div>
-</div>
+</div>-->
 <!-- Video Modal End -->
 
 
@@ -417,12 +417,12 @@ active
                             <h5>Leandro Romero</h5>
                             <span class="text-primary">Sócio-Fundador</span>
                             <div class="team-social">
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fab fa-instagram"></i></a>
+                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
+                                        class="fa-brands fa-whatsapp"></i></a>
+                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
+                                        class="fa fa-envelope-open"></i></a>
+<!--                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
+                                        class="fab fa-linkedin"></i></a>-->
                             </div>
                         </div>
                     </div>
@@ -440,12 +440,10 @@ active
                             <h5>Daniela Romero</h5>
                             <span class="text-primary">Sócia-Proprietária</span>
                             <div class="team-social">
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fab fa-instagram"></i></a>
+                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
+                                        class="fa-brands fa-whatsapp"></i></a>
+                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
+                                        class="fa fa-envelope-open"></i></a>
                             </div>
                         </div>
                     </div>
@@ -463,12 +461,10 @@ active
                             <h5>Maycon Oliveira</h5>
                             <span class="text-primary">Diretor</span>
                             <div class="team-social">
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fab fa-instagram"></i></a>
+                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
+                                        class="fa-brands fa-whatsapp"></i></a>
+                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
+                                        class="fa fa-envelope-open"></i></a>
                             </div>
                         </div>
                     </div>
@@ -486,12 +482,10 @@ active
                             <h5>Luis Guarini</h5>
                             <span class="text-primary">Vendas</span>
                             <div class="team-social">
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fab fa-instagram"></i></a>
+                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
+                                        class="fa-brands fa-whatsapp"></i></a>
+                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
+                                        class="fa fa-envelope-open"></i></a>
                             </div>
                         </div>
                     </div>

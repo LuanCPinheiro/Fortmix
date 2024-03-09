@@ -53,17 +53,16 @@
                 <div class="col-lg-6 ps-5 text-start">
                     <div class="h-100 d-inline-flex align-items-center text-white">
                         <span>Redes Sociais:</span>
-                        <a class="btn btn-link text-light"fort href="https://www.facebook.com/profile.php?id=100038898171234"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-link text-light" href="https://www.instagram.com/fortmixnutricaoanimal/"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-link text-light" href=""><i class="fab fa-google"></i></a>
-                        <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a target="_blank" class="btn btn-link text-light"fort href="https://www.facebook.com/profile.php?id=100038898171234"><i class="fab fa-facebook-f"></i></a>
+                        <a target="_blank" class="btn btn-link text-light" href="https://www.instagram.com/fortmixnutricaoanimal/"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" class="btn btn-link text-light" href="https://maps.app.goo.gl/zb76ky1jWGe5JX548"><i class="fab fa-google"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-6 text-end">
-                    <div class="h-100 topbar-right d-inline-flex align-items-center text-white py-2 px-5">
+                    <a target="_blank" href="tel:+556735963498" class="h-100 topbar-right d-inline-flex align-items-center text-white py-2 px-5">
                         <span class="fs-5 fw-bold me-2"><i class="fa fa-phone-alt me-2"></i>Telefone:</span>
                         <span class="fs-5 fw-bold">(67) 3596-3498</span>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -72,7 +71,7 @@
 
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
-            <a class="navbar-brand ps-5 me-0">
+            <a href="/" class="navbar-brand ps-5 me-0">
                 <img class="img-fluid logo_menu" src="img/logo_fortmix_HD.png" alt="logotipo_fortmix_logo_verde_e_vermelha_com_escrita_fortmix"/>
                 <h1 class="text-white m-0">FORTMIX</h1>
             </a>
@@ -98,7 +97,7 @@
                                         </div>-->
                     <a href="{{url('/contato')}}" class="nav-item nav-link">Contato</a>
                 </div>
-                <a href="https://api.whatsapp.com/send?phone=5567981539267&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site." class="btn btn-primary px-3 d-none d-lg-block">Chamar no WhatsApp</a>
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=5567981539267&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site." class="btn btn-primary px-3 d-none d-lg-block">Chamar no WhatsApp</a>
             </div>
         </nav>
         <!-- Navbar End -->
@@ -111,32 +110,30 @@
                 <div class="row g-5">
                     <div class="col-lg-4 col-md-6">
                         <h5 class="text-white mb-4">Matriz</h5>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Avenida Adilson Romano Machado, 50 - Dist. Industrial, Cassilândia - MS, 79540-000</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(67) 3596-3498</p>
-                        <p class="mb-2"><i class="fab fa-whatsapp me-3"></i>(67) 98153-9267</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>contato@fortmixnutricao.com</p>
+                        <p class="mb-2"><a class="text-white" href="https://maps.app.goo.gl/XCUmRdKnPKZwANN96" target="_blank"><i class="fa fa-map-marker-alt me-3"></i>Avenida Adilson Romano Machado, 50 - Dist. Industrial, Cassilândia - MS, 79540-000</a></p>
+                        <p class="mb-2"><a class="text-white" href="tel:+556735963498" target="_blank"><i class="fa fa-phone-alt me-3"></i>(67) 3596-3498</a></p>
+                        <p class="mb-2"><a class="text-white" href="https://api.whatsapp.com/send?phone=5567981539267&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site." target="_blank"><i class="fab fa-whatsapp me-3"></i>(67) 98153-9267</a></p>
+                        <p class="mb-2"><a class="text-white" href="mailto:contato@fortmixnutricao.com.br" target="_blank"><i class="fa fa-envelope me-3"></i>contato@fortmixnutricao.com</a></p>
                         <div class="d-flex pt-3">
-                            <a class="btn btn-square btn-primary rounded-circle me-2" href="">
+                            <a target="_blank" class="btn btn-square btn-primary rounded-circle me-2" href="https://www.facebook.com/profile.php?id=100038898171234">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a class="btn btn-square btn-primary rounded-circle me-2" href="">
+                            <a target="_blank" class="btn btn-square btn-primary rounded-circle me-2" href="https://www.instagram.com/fortmixnutricaoanimal/">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a class="btn btn-square btn-primary rounded-circle me-2" href="">
+                            <a target="_blank" class="btn btn-square btn-primary rounded-circle me-2" href="https://maps.app.goo.gl/zb76ky1jWGe5JX548">
                                 <i class="fab fa-google"></i>
-                            </a>
-                            <a class="btn btn-square btn-primary rounded-circle me-2" href="">
-                                <i class="fab fa-linkedin-in"></i>
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <h5 class="text-white mb-4">Menu</h5>
+                        <a class="btn btn-link" href="/">Início</a>
                         <a class="btn btn-link" href="/sobrenos">Sobre Nós</a>
-                        <a class="btn btn-link" href="/produtos">Produtos</a>
-                        <a class="btn btn-link" href="/ondecomprar">Onde Comprar</a>
-                        <a class="btn btn-link" href="/clientes">Clientes</a>
-                        <a class="btn btn-link" href="/contato">Contato</a>
+<!--                        <a class="btn btn-link" href="/produtos">Produtos</a>
+                        <a class="btn btn-link" href="/ondecomprar">Onde Comprar</a>-->
+                        <!--<a class="btn btn-link" href="/clientes">Clientes</a>-->
+                        <a class="btn btn-link" href="/contato">Fale Conosco</a>
                         <a class="btn btn-link" href="/dashboard">Área do Colaborador</a>
                     </div>
                     <div class="col-lg-4 col-md-6">
@@ -158,7 +155,7 @@
         <div class="container-fluid copyright bg-dark py-4">
             <div class="container text-center">
                 <p class="mb-0">
-                    Site desenvolvido por <a class="fw-semi-bold" href="https://www.pinheiromkt.com.br">Agência Pinheiro</a>.
+                    Site desenvolvido por <a target="_blank" class="fw-semi-bold" href="https://wa.me/message/GO5LIMMCY326K1">Agência Pinheiro</a>.
                 </p>
 <!--                <p class="mb-2">
                     Copyright &copy; <a class="fw-semi-bold" href="#">Your Site Name</a>, All Right Reserved.
