@@ -33,7 +33,7 @@ active
                         <thead>
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Cidade</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Estado</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">UF</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Ações</th>
                             </tr>
                         </thead>
@@ -50,7 +50,7 @@ active
                                 <td>
                                     <div class="d-flex px-2 py-1">
                                         <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm">{{$cidade->estado->nome}}</h6>
+                                            <h6 class="mb-0 text-sm">{{$cidade->estado->uf}}</h6>
                                         </div>
                                     </div>
                                 </td>
@@ -86,7 +86,7 @@ active
                         <thead>
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Cidade</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Estado</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">UF</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Ações</th>
                             </tr>
                         </thead>
@@ -103,7 +103,7 @@ active
                                 <td>
                                     <div class="d-flex px-2 py-1">
                                         <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm">{{$cidade->estado->nome}}</h6>
+                                            <h6 class="mb-0 text-sm">{{$cidade->estado->uf}}</h6>
                                         </div>
                                     </div>
                                 </td>
@@ -139,7 +139,7 @@ active
                         <thead>
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Cidade</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Estado</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">UF</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Ações</th>
                             </tr>
                         </thead>
@@ -156,7 +156,7 @@ active
                                 <td>
                                     <div class="d-flex px-2 py-1">
                                         <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm">{{$cidade->estado->nome}}</h6>
+                                            <h6 class="mb-0 text-sm">{{$cidade->estado->uf}}</h6>
                                         </div>
                                     </div>
                                 </td>
@@ -192,7 +192,7 @@ active
                         <thead>
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Cidade</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Estado</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">UF</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Ações</th>
                             </tr>
                         </thead>
@@ -209,7 +209,7 @@ active
                                 <td>
                                     <div class="d-flex px-2 py-1">
                                         <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm">{{$cidade->estado->nome}}</h6>
+                                            <h6 class="mb-0 text-sm">{{$cidade->estado->uf}}</h6>
                                         </div>
                                     </div>
                                 </td>
@@ -245,7 +245,7 @@ active
                         <thead>
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Cidade</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Estado</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">UF</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Ações</th>
                             </tr>
                         </thead>
@@ -262,7 +262,7 @@ active
                                 <td>
                                     <div class="d-flex px-2 py-1">
                                         <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm">{{$cidade->estado->nome}}</h6>
+                                            <h6 class="mb-0 text-sm">{{$cidade->estado->uf}}</h6>
                                         </div>
                                     </div>
                                 </td>

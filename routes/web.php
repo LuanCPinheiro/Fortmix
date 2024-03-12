@@ -33,11 +33,13 @@ Route::get('/contato', function () {
     return view('contato');
 });
 
+Route::get('/regioesAtendidas', [HomeController::class, 'regioesAtendidas'])->name('regioesatendidas');
+
 //Route::get('/produtos', function () {
 //    return view('produtos');
 //});
 
-Route::get('/gerarSenha', [HomeController::class, 'gerarSenha']);
+//Route::get('/gerarSenha', [HomeController::class, 'gerarSenha']);
 
 Route::get('/dashboard/representantes', [RepresentanteController::class, 'index'])->middleware('auth', 'isSuper')->name('representantes');
 

@@ -413,9 +413,9 @@ h6,
     transition: .5s;
 }
 
-.service-item:hover .service-title {
+/*.service-item:hover .service-title {
     top: -100%;
-}
+}*/
 
 .service-item .service-text {
     position: absolute;
@@ -432,9 +432,9 @@ h6,
     transition: .5s;
 }
 
-.service-item:hover .service-text {
+/*.service-item:hover .service-text {
     top: 0;
-}
+}*/
 
 .service-item .service-text::before {
     position: absolute;
@@ -448,9 +448,9 @@ h6,
     transition: .5s;
 }
 
-.service-item:hover .service-text::before {
+/*.service-item:hover .service-text::before {
     top: -55px;
-}
+}*/
 
 .service-item .btn {
     position: absolute;

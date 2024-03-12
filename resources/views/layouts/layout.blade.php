@@ -83,6 +83,7 @@
                     <a href="{{url('/')}}" class="nav-item nav-link @yield('inicio')">Início</a>
                     <!--<a href="{{url('/produtos')}}" class="nav-item nav-link @yield('produtos')">Produtos</a>-->
                     <a href="{{url('/sobrenos')}}" class="nav-item nav-link @yield('sobrenos')">Sobre Nós</a>
+                    <a href="{{url('/regioesAtendidas')}}" class="nav-item nav-link @yield('atendidas')">Regiões Atendidas</a>
                     <!--<a href="{{url('/ondecomprar')}}" class="nav-item nav-link @yield('ondecomprar')">Onde Comprar</a>-->
                     <!--<a href="{{url('/clientes')}}" class="nav-item nav-link @yield('clientes')">Clientes</a>-->
                     <!--                    <div class="nav-item dropdown">
@@ -130,6 +131,7 @@
                         <h5 class="text-white mb-4">Menu</h5>
                         <a class="btn btn-link" href="{{url('/')}}">Início</a>
                         <a class="btn btn-link" href="{{url('/sobrenos')}}">Sobre Nós</a>
+                        <a class="btn btn-link" href="{{url('/regioesAtendidas')}}">Regiões Atendidas</a>
 <!--                        <a class="btn btn-link" href="/produtos">Produtos</a>
                         <a class="btn btn-link" href="/ondecomprar">Onde Comprar</a>-->
                         <!--<a class="btn btn-link" href="/clientes">Clientes</a>-->

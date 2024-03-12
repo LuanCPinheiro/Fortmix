@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Estado;
-use App\Models\Representantes;
+use App\Models\Representante;
 
 class Cidade extends Model {
 
@@ -24,7 +24,7 @@ class Cidade extends Model {
     }
     
     public function representantes() {
-        return $this->hasMany(Representantes::class, 'cidade_id', 'id');
+        return $this->hasMany(Representante::class, 'cidade_id', 'id');
     }
 
 }
