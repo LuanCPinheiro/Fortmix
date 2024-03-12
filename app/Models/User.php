@@ -8,9 +8,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
-{
-    use HasApiTokens, HasFactory, Notifiable;
+class User extends Authenticatable {
+
+    use HasApiTokens,
+        HasFactory,
+        Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -42,4 +44,21 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function isSuper() {
+        if ($this->nivelpermissao >= 5) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public function isAdmin() {
+        if ($this->nivelpermissao === 6) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

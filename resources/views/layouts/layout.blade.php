@@ -128,13 +128,13 @@
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <h5 class="text-white mb-4">Menu</h5>
-                        <a class="btn btn-link" href="/">Início</a>
-                        <a class="btn btn-link" href="/sobrenos">Sobre Nós</a>
+                        <a class="btn btn-link" href="{{url('/')}}">Início</a>
+                        <a class="btn btn-link" href="{{url('/sobrenos')}}">Sobre Nós</a>
 <!--                        <a class="btn btn-link" href="/produtos">Produtos</a>
                         <a class="btn btn-link" href="/ondecomprar">Onde Comprar</a>-->
                         <!--<a class="btn btn-link" href="/clientes">Clientes</a>-->
-                        <a class="btn btn-link" href="/contato">Fale Conosco</a>
-                        <a class="btn btn-link" href="/dashboard">Área do Colaborador</a>
+                        <a class="btn btn-link" href="{{url('/contato')}}">Contato</a>
+                        <a class="btn btn-link" href="{{url('/dashboard')}}">Área do Colaborador</a>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <h5 class="text-white mb-4">Expediente</h5>

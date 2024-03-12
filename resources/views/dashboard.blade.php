@@ -1,17 +1,30 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('layouts.dashboardLayout')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
-                </div>
+@section('titulo')
+Dashboard Fortmix
+@endsection
+
+@section('active1')
+active
+@endsection
+
+@section('breadcrumb')
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+        <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white" href="javascript:;">Dashboard</a></li>
+        <li class="breadcrumb-item text-sm text-white active" aria-current="page">Início</li>
+    </ol>
+</nav>
+@endsection
+
+@section('content')
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-body pb-0">
+                <h6>Usuário Logado: {{Auth::user()->name}}</h6>
             </div>
         </div>
     </div>
-</x-app-layout>
+</div>
+@endsection

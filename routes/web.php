@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RepresentanteController;
+use App\Http\Controllers\CidadeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +37,24 @@ Route::get('/contato', function () {
 //    return view('produtos');
 //});
 
+Route::get('/gerarSenha', [HomeController::class, 'gerarSenha']);
+
+Route::get('/dashboard/representantes', [RepresentanteController::class, 'index'])->middleware('auth', 'isSuper')->name('representantes');
+
+// Regiões atendidas //
+// Regiões atendidas //
+// Regiões atendidas //
+
+Route::get('/dashboard/regioesatendidas', [CidadeController::class, 'index'])->middleware('auth', 'isAdmin')->name('dashboard.regioesatendidas');
+
+Route::post('dashboard/addRegiao', [CidadeController::class, 'addRegiao'])->middleware('auth', 'isAdmin')->name('dashboard.addRegiao');
+
+Route::get('dashboard/buscarCidades{uf}', [CidadeController::class, 'buscarCidades'])->middleware(['auth', 'isAdmin'])->name('dashboard.buscarCidades');
+
+// Regiões atendidas //
+// Regiões atendidas //
+// Regiões atendidas //
+
 Route::get('/clientes', function () {
     return view('clientes');
 });
@@ -45,7 +66,7 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy')->middleware('auth', 'isAdmin');
 });
 
 require __DIR__.'/auth.php';
