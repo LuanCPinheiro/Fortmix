@@ -22,57 +22,73 @@ active
     <div class="col-12">
         <div class="card mb-4">
             <div class="card-header pb-0">
-                <h6>Lista de Representantes</h6>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
-                <div class="table-responsive p-0">
-                    <table class="table align-items-center mb-0">
-                        <thead>
-                            <tr>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nome</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Cidade/Estado</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Contato</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($reps as $rep)
-                            <tr>
-                                <td>
-                                    <div class="d-flex px-2 py-1">
-                                        <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm">{{$rep->nome}}</h6>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d-flex px-2 py-1">
-                                        <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm">{{$rep->cidade->nome}} / {{$rep->uf}}</h6>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d-flex px-2 py-1">
-                                        <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm">{{$rep->tel1}}</h6>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d-flex px-2 py-1">
-                                        <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm"></h6>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#modalRep">Adicionar Representante</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+@include('representantes.cadRep', ['estados' => $estados])
+
+@include('representantes.table', ['uf' => "MS",
+'estado' => "Mato Grosso do Sul",
+'reps' => $representantes])
+
+@include('representantes.table', ['uf' => "MT",
+'estado' => "Mato Grosso",
+'reps' => $representantes])
+
+@include('representantes.table', ['uf' => "GO",
+'estado' => "Goiás",
+'reps' => $representantes])
+
+@include('representantes.table', ['uf' => "SP",
+'estado' => "São Paulo",
+'reps' => $representantes])
+
+@include('representantes.table', ['uf' => "MG",
+'estado' => "Minas Gerais",
+'reps' => $representantes])
+
+@endsection
+
+@section('endfiles')
+<script type="text/javascript">
+    function buscarCidades() {
+        $("#cidade").html("");
+
+        var uf = $("#estado").val();
+
+        var append = "";
+
+        if (!$("#divCidade").hasClass('hidden')) {
+            $("#divCidade").addClass('hidden');
+        }
+
+        $("#loader").removeClass('hidden');
+
+        var link = "buscarCidadesAtivas" + uf;
+
+        $.ajax({
+            url: link,
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                if (data) {
+                    for (i in data) {
+                        append += "<option class='form-control' value='" + data[i].id + "'>"
+                                + data[i].nome + "</option>";
+                    }
+                    $("#cidade").html(append);
+                    $("#loader").addClass('hidden');
+                    $("#divCidade").removeClass('hidden');
+                }
+            }
+        });
+    }
+</script>
 @endsection

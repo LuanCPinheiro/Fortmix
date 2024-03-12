@@ -26,8 +26,16 @@ class RepresentanteController extends Controller {
      */
     public function index() {
         $representantes = $this->obj->orderBy('nome')->get();
+        $estados = $this->estado->join('cidade', 'estado.id', 'cidade.uf')
+                ->select('estado.*')
+                ->where('cidade.atendida', '=', 1)
+                ->groupBy('estado.id')
+                ->orderBy('estado.nome')
+                ->get();
         
-        return view('representantes.index', ['reps' => $representantes]);
+//        dd($estados);
+        
+        return view('representantes.index', ['representantes' => $representantes, 'estados' => $estados]);
     }
 
     /**

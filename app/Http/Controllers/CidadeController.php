@@ -48,9 +48,25 @@ class CidadeController extends Controller {
         }
     }
 
-    public function buscarCidades($uf) {
+    public function buscarCidadesInativas($uf) {
         $estado = $this->estado->where('uf', 'like', $uf)->first();
         $cidades = $this->obj->where('uf', '=', $estado->id)->where('atendida', '=', 0)->get();
+        $retorno = [];
+
+        foreach ($cidades as $cidade) {
+            $retorno[] = [
+                'nome' => $cidade->nome,
+                'id' => $cidade->id,
+                'uf' => $cidade->estado->uf
+            ];
+        }
+
+        return json_encode($retorno);
+    }
+    
+    public function buscarCidadesAtivas($uf) {
+        $estado = $this->estado->where('uf', 'like', $uf)->first();
+        $cidades = $this->obj->where('uf', '=', $estado->id)->where('atendida', '=', 1)->get();
         $retorno = [];
 
         foreach ($cidades as $cidade) {

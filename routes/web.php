@@ -41,7 +41,16 @@ Route::get('/regioesAtendidas', [HomeController::class, 'regioesAtendidas'])->na
 
 //Route::get('/gerarSenha', [HomeController::class, 'gerarSenha']);
 
+// Representantes //
+// Representantes //
+// Representantes //
+
 Route::get('/dashboard/representantes', [RepresentanteController::class, 'index'])->middleware('auth', 'isSuper')->name('representantes');
+Route::post('/dashboard/addRep', [RepresentanteController::class, 'store'])->middleware('auth', 'isSuper')->name('dashboard.addRep');
+
+// Representantes //
+// Representantes //
+// Representantes //
 
 // Regiões atendidas //
 // Regiões atendidas //
@@ -51,7 +60,9 @@ Route::get('/dashboard/regioesatendidas', [CidadeController::class, 'index'])->m
 
 Route::post('dashboard/addRegiao', [CidadeController::class, 'addRegiao'])->middleware('auth', 'isAdmin')->name('dashboard.addRegiao');
 
-Route::get('dashboard/buscarCidades{uf}', [CidadeController::class, 'buscarCidades'])->middleware(['auth', 'isAdmin'])->name('dashboard.buscarCidades');
+Route::get('dashboard/buscarCidadesInativas{uf}', [CidadeController::class, 'buscarCidadesInativas'])->middleware(['auth', 'isSuper'])->name('dashboard.buscarCidadesInativas');
+
+Route::get('dashboard/buscarCidadesAtivas{uf}', [CidadeController::class, 'buscarCidadesAtivas'])->middleware(['auth', 'isSuper'])->name('dashboard.buscarCidadesAtivas');
 
 // Regiões atendidas //
 // Regiões atendidas //

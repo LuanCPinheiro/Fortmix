@@ -307,7 +307,7 @@ active
                             </div>
                             <div class="hidden" id="cidadeDiv">
                                 <label class="form-control-label">Selecione a Cidade</label>
-                                <select class="form-control" name="cidade" id="cidade">
+                                <select required="true" class="form-control" name="cidade" id="cidade">
                                 </select>
                             </div>
                             <div class="text-center hidden" id="botao">
@@ -338,7 +338,7 @@ active
 
         var append = "";
 
-        var link = "buscarCidades" + uf;
+        var link = "buscarCidadesInativas" + uf;
 
         $.ajax({
             url: link,
