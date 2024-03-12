@@ -75,7 +75,7 @@ active
                             <p class="text-white mb-0">Veja as cidades atendidas e nossos representantes no Mato Grosso</p>
                         </div>
                     </div>
-                    <a class="btn btn-light" href="">Ver Cidades</a>
+                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalMT">Ver Cidades</button>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -94,7 +94,7 @@ active
                             <p class="text-white mb-0">Veja as cidades atendidas e nossos representantes em Goiás</p>
                         </div>
                     </div>
-                    <a class="btn btn-light" href="">Ver Cidades</a>
+                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalGO">Ver Cidades</button>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -113,7 +113,7 @@ active
                             <p class="text-white mb-0">Veja as cidades atendidas e nossos representantes em São Paulo</p>
                         </div>
                     </div>
-                    <a class="btn btn-light" href="">Ver Cidades</a>
+                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalSP">Ver Cidades</button>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -132,7 +132,7 @@ active
                             <p class="text-white mb-0">Veja as cidades atendidas e nossos representantes em Minas Gerais</p>
                         </div>
                     </div>
-                    <a class="btn btn-light" href="">Ver Cidades</a>
+                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalMG">Ver Cidades</button>
                 </div>
             </div>                
         </div>
@@ -140,86 +140,24 @@ active
 </div>
 <!-- Service End -->
 
-<div class="modal fade" id="modalMS" tabindex="-1" aria-labelledby="modalMSLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalMSLabel">Cidades e Representantes - Mato Grosso do Sul</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="accordion" id="accordionMS">
-                    @foreach($cidadesMS as $cidade)
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="heading{{$cidade->id}}">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{$cidade->id}}" aria-expanded="true" aria-controls="collapse{{$cidade->id}}">
-                                {{$cidade->nome}}
-                            </button>
-                        </h2>
-                        <div id="collapse{{$cidade->id}}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionMS">
-                            <div class="accordion-body">
-                                <div class="row justify-content-start">
-                                    @foreach($cidade->representantes as $rep)
-                                    @if($rep->active)
-                                    <div class="col-auto mb-2">
-                                        <div class="card" style="width: 18rem;">
-                                            <div class="card-body">
-                                                <h5 class="card-title">{{$rep->nome}}</h5>
-                                                <h6 class="card-subtitle mb-2 text-muted">{{$rep->cargo}}</h6>
-                                                @if($rep->formacao !== null && $rep->formacao !== "")
-                                                <p class="card-text">
-                                                    {{$rep->formacao}}
-                                                </p>
-                                                @endif
-                                                <p class="card-text">
-                                                    <a target="_blank" class="btn btn-primary" href="https://api.whatsapp.com/send?phone=55{{$rep->tel1}}">
-                                                        <i class="fas fa-brands fa-whatsapp"></i> Chamar no WhatsApp
-                                                    </a>
-                                                </p>
-                                                @if($rep->tel2 !== null && $rep->tel2 !== "")
-                                                <p class="card-text">
-                                                    <a target="_blank" class="btn btn-primary" href="tel:+55{{$rep->tel2}}">
-                                                        <i class="fa fa-phone-alt"></i> Ligar
-                                                    </a>
-                                                </p>
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endif
-                                    @endforeach
-                                    <div class="col-auto mb-2">
-                                        <div class="card" style="width: 18rem;">
-                                            <div class="card-body">
-                                                <h5 class="card-title">FORTMIX</h5>
-                                                <h6 class="card-subtitle mb-2 text-muted">Matriz</h6>
-                                                <p class="card-text">
-                                                    Fale com nossa equipe:
-                                                </p>
-                                                <p class="card-text">
-                                                    <a target="_blank" class="btn btn-primary" href="https://api.whatsapp.com/send?phone=5567981539267">
-                                                        <i class="fas fa-brands fa-whatsapp"></i> Chamar no WhatsApp
-                                                    </a>
-                                                </p>
-                                                <p class="card-text">
-                                                    <a target="_blank" class="btn btn-primary" href="tel:+556730309999">
-                                                        <i class="fas fa-brands fa-whatsapp"></i> Ligar
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-            </div>
-        </div>
-    </div>
-</div>
+@include('modalCidades', ['uf' => "MS",
+'estado' => "Mato Grosso do Sul",
+'cidades' => $cidadesMS])
+
+@include('modalCidades', ['uf' => "MT",
+'estado' => "Mato Grosso",
+'cidades' => $cidadesMT])
+
+@include('modalCidades', ['uf' => "GO",
+'estado' => "Goiás",
+'cidades' => $cidadesGO])
+
+@include('modalCidades', ['uf' => "SP",
+'estado' => "São Paulo",
+'cidades' => $cidadesSP])
+
+@include('modalCidades', ['uf' => "MG",
+'estado' => "Minas Gerais",
+'cidades' => $cidadesMG])
+
 @endsection
