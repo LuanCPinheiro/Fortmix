@@ -7997,7 +7997,7 @@ fieldset:disabled .btn {
 }
 
 .link-primary {
-  color: #5e72e4 !important;
+  color: #570000 !important;
 }
 
 .link-primary:hover,
@@ -8699,7 +8699,7 @@ fieldset:disabled .btn {
 }
 
 .border-primary {
-  border-color: #5e72e4 !important;
+  border-color: #570000 !important;
 }
 
 .border-secondary {
@@ -10508,7 +10508,7 @@ fieldset:disabled .btn {
 
 /* rtl:end:remove */
 .text-primary {
-  color: #5e72e4 !important;
+  color: #570000 !important;
 }
 
 .text-secondary {
@@ -10580,7 +10580,7 @@ fieldset:disabled .btn {
 }
 
 .bg-primary {
-  background-color: #5e72e4 !important;
+  background-color: #570000 !important;
 }
 
 .bg-secondary {
@@ -21471,8 +21471,8 @@ fieldset:disabled .btn {
 }
 
 .input-group .form-control:focus {
-  border-left: 1px solid #5e72e4 !important;
-  border-right: 1px solid #5e72e4 !important;
+  border-left: 1px solid #570000 !important;
+  border-right: 1px solid #570000 !important;
 }
 
 .input-group .form-control:not(:first-child) {
@@ -21499,7 +21499,7 @@ fieldset:disabled .btn {
 }
 
 .input-group.focused .input-group-text {
-  border-color: #5e72e4 !important;
+  border-color: #570000 !important;
 }
 
 .form-control.form-control-alternative {
@@ -26307,7 +26307,7 @@ span.flatpickr-weekday {
 .flatpickr-calendar .flatpickr-day.selected,
 .flatpickr-calendar .flatpickr-day.startRange,
 .flatpickr-calendar .flatpickr-day.endRange {
-  background: #5e72e4 !important;
+  background: #570000 !important;
   color: #fff;
   border: none;
 }
