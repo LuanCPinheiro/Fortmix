@@ -30,17 +30,23 @@
                                                 </p>
                                                 @endif
                                                 <p class="card-text">
+                                                    <span class="telmask">{{$rep->tel1}}</span>
+                                                </p>
+                                                @if($rep->tel2 !== null && $rep->tel2 !== "")
+                                                <p class="card-text">
+                                                    <span class="telmask">{{$rep->tel2}}</span>
+                                                </p>
+                                                @endif
+                                                <p class="card-text">
                                                     <a target="_blank" class="btn btn-primary" href="https://api.whatsapp.com/send?phone=55{{$rep->tel1}}">
                                                         <i class="fas fa-brands fa-whatsapp"></i> Chamar no WhatsApp
                                                     </a>
                                                 </p>
-                                                @if($rep->tel2 !== null && $rep->tel2 !== "")
                                                 <p class="card-text">
-                                                    <a target="_blank" class="btn btn-primary" href="tel:+55{{$rep->tel2}}">
+                                                    <a target="_blank" class="btn btn-primary" href="tel:+55{{$rep->tel1}}">
                                                         <i class="fa fa-phone-alt"></i> Ligar
                                                     </a>
                                                 </p>
-                                                @endif
                                             </div>
                                         </div>
                                     </div>
@@ -55,12 +61,18 @@
                                                     Fale com nossa equipe:
                                                 </p>
                                                 <p class="card-text">
+                                                    <span class="telmask">67981539267</span>
+                                                </p>
+                                                <p class="card-text">
+                                                    <span class="telmask">6735963498</span>
+                                                </p>
+                                                <p class="card-text">
                                                     <a target="_blank" class="btn btn-primary" href="https://api.whatsapp.com/send?phone=5567981539267">
                                                         <i class="fas fa-brands fa-whatsapp"></i> Chamar no WhatsApp
                                                     </a>
                                                 </p>
                                                 <p class="card-text">
-                                                    <a target="_blank" class="btn btn-primary" href="tel:+556730309999">
+                                                    <a target="_blank" class="btn btn-primary" href="tel:+556735963498">
                                                         <i class="fas fa-brands fa-whatsapp"></i> Ligar
                                                     </a>
                                                 </p>

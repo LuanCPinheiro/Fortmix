@@ -66,14 +66,22 @@
                             <span class="nav-link-text ms-1">Representantes</span>
                         </a>
                     </li>
-                    @endif
-                    @if(Auth::user()->isAdmin())
                     <li class="nav-item">
                         <a class="nav-link @yield('active3')" href="{{url('dashboard/regioesatendidas')}}">
                             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                                 <i class="ni ni-pin-3 text-dark text-sm opacity-10"></i>
                             </div>
                             <span class="nav-link-text ms-1">Regiões Atendidas</span>
+                        </a>
+                    </li>
+                    @endif
+                    @if(Auth::user()->isAdmin())
+                    <li class="nav-item">
+                        <a class="nav-link @yield('active4')" href="{{url('dashboard/usuarios')}}">
+                            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                                <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
+                            </div>
+                            <span class="nav-link-text ms-1">Usuários</span>
                         </a>
                     </li>
                     @endif

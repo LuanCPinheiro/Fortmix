@@ -75,7 +75,6 @@
                             </div>
                     </div>
                     <div class="text-center" id="botao">
-                        <button type="clear" class="btn bg-gradient-warning btn-lg mt-4 mb-0">Limpar Campos</button>
                         <button type="submit" class="btn bg-gradient-success btn-lg mt-4 mb-0">Cadastrar</button>
                     </div>
                 </form>

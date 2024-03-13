@@ -1,10 +1,10 @@
 @extends('layouts.dashboardLayout')
 
 @section('titulo')
-Lista de Representantes Fortmix
+Usuários Fortmix
 @endsection
 
-@section('active2')
+@section('active4')
 active
 @endsection
 
@@ -12,7 +12,7 @@ active
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
         <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white" href="javascript:;">Dashboard</a></li>
-        <li class="breadcrumb-item text-sm text-white active" aria-current="page">Representantes</li>
+        <li class="breadcrumb-item text-sm text-white active" aria-current="page">Usuários</li>
     </ol>
 </nav>
 @endsection
@@ -22,110 +22,69 @@ active
     <div class="col-12">
         <div class="card mb-4">
             <div class="card-header pb-0">
-                @if(session('msg'))
-                <div class="alert alert-{{session('danger') ?? 'success'}} alert-dismissible fade show" role="alert">
-                    @if(session('danger'))
-                    <span class="alert-icon"><i class="ni ni-settings"></i></span>
-                    @else
-                    <span class="alert-icon"><i class="ni ni-like-2"></i></span>
-                    @endif
-                    <span class="alert-text"><strong>{{session('msg')}}</strong></span>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                @endif
+                <h6>Lista de Usuários Ativos</h6>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
                 <div class="d-flex justify-content-center">
-                    <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#modalRep">Adicionar Representante</button>
+                    @if(session('msg'))
+                    <div class="alert alert-{{session('danger') ?? 'success'}} alert-dismissible fade show" role="alert">
+                        @if(session('danger'))
+                        <span class="alert-icon"><i class="ni ni-settings"></i></span>
+                        @else
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        @endif
+                        <span class="alert-text"><strong>{{session('msg')}}</strong></span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    @endif
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-@include('representantes.cadRep', ['estados' => $estados])
-
-@include('representantes.table', ['uf' => "MS",
-'estado' => "Mato Grosso do Sul",
-'reps' => $representantes])
-
-@include('representantes.table', ['uf' => "MT",
-'estado' => "Mato Grosso",
-'reps' => $representantes])
-
-@include('representantes.table', ['uf' => "GO",
-'estado' => "Goiás",
-'reps' => $representantes])
-
-@include('representantes.table', ['uf' => "SP",
-'estado' => "São Paulo",
-'reps' => $representantes])
-
-@include('representantes.table', ['uf' => "MG",
-'estado' => "Minas Gerais",
-'reps' => $representantes])
-
-<hr/>
-<hr/>
-<hr/>
-<hr/>
-<hr/>
-
-<div class="row">
-    <div class="col-12">
-        <div class="card mb-4">
-            <div class="card-header pb-0">
-                <h6>Lista de Representantes Desativados</h6>
-            </div>
-            <div class="card-body px-0 pt-0 pb-2">
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#modalUser">Adicionar Usuário</button>
+                </div>
                 <div class="table-responsive p-0">
                     <table class="table align-items-center mb-0">
                         <thead>
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nome</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Cidade/Estado</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Contato</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nível de Permissão</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Email</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Ações</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($desativados as $rep)
+                            @foreach($usuariosAtivos as $user)
                             <tr>
                                 <td>
                                     <div class="d-flex px-2 py-1">
                                         <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm">{{$rep->nome}}</h6>
+                                            <h6 class="mb-0 text-sm">{{$user->name}}</h6>
                                         </div>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-flex px-2 py-1">
                                         <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm">{{$rep->cidade->nome}} / {{$rep->uf}}</h6>
+                                            <h6 class="mb-0 text-sm">{{$user->nivelpermissao}}</h6>
                                         </div>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-flex px-2 py-1">
                                         <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm">{{$rep->tel1}}</h6>
+                                            <h6 class="mb-0 text-sm">{{$user->email}}</h6>
                                         </div>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-flex px-2 py-1">
                                         <div class="d-flex flex-column justify-content-center">
-                                            <button type="button" onclick="ativar({{$rep->id}}, '{{$rep->nome}}')"
-                                               class="btn btn-success btn-tooltip" data-bs-toggle="tooltip"
-                                               data-bs-placement="top" title="Ativar Representante" data-container="body"
-                                               data-animation="true"><i class="fas fa-check"></i></button>
-
-                                            <button type="button" onclick="deletar({{$rep->id}}, '{{$rep->nome}}')"
-                                               class="btn btn-danger btn-tooltip" data-bs-toggle="tooltip"
-                                               data-bs-placement="top" title="Excluir Representante" data-container="body"
-                                               data-animation="true"><i class="fas fa-trash"></i></button>
+                                            <button type="button" onclick="desativar({{$user->id}}, '{{$user->name}}')"
+                                                    class="btn btn-danger btn-tooltip" data-bs-toggle="tooltip" data-bs-placement="left"
+                                                    title="Desativar Usuário" data-container="body" data-animation="true">
+                                                <i class="fas fa-ban"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </td>
@@ -138,6 +97,76 @@ active
         </div>
     </div>
 </div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header pb-0">
+                <h6>Lista de Usuários Inativos</h6>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+                <div class="d-flex justify-content-center">
+                </div>
+                <div class="table-responsive p-0">
+                    <table class="table align-items-center mb-0">
+                        <thead>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nome</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nível de Permissão</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Email</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($usuariosInativos as $user)
+                            <tr>
+                                <td>
+                                    <div class="d-flex px-2 py-1">
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="mb-0 text-sm">{{$user->name}}</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex px-2 py-1">
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="mb-0 text-sm">{{$user->nivelpermissao}}</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex px-2 py-1">
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="mb-0 text-sm">{{$user->email}}</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex px-2 py-1">
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <button type="button" onclick="ativar({{$user->id}}, '{{$user->name}}')"
+                                                    class="btn btn-success btn-tooltip" data-bs-toggle="tooltip"
+                                                    data-bs-placement="left" title="Ativar Usuário" data-container="body"
+                                                    data-animation="true"><i class="fas fa-check"></i></button>
+
+                                            <button type="button" onclick="deletar({{$user->id}}, '{{$user->name}}')"
+                                                    class="btn btn-danger btn-tooltip" data-bs-toggle="tooltip"
+                                                    data-bs-placement="left" title="Excluir Usuário" data-container="body"
+                                                    data-animation="true"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@include('usuarios.cadUser')
 
 <div class="modal fade" id="modal-desativar" tabindex="-1" role="dialog" aria-labelledby="modal-desativarLabel" aria-hidden="true">
     <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
@@ -219,8 +248,8 @@ active
     keyboard: false
     });
     var link = $("#btnDesativar").attr("href");
-    $("#pDesativar").html("Ao confirmar você irá desativar o representante: " + nome + "!");
-    $("#btnDesativar").attr("href", link + "/desativarRep" + id);
+    $("#pDesativar").html("Ao confirmar você irá desativar o usuário: " + nome + "!");
+    $("#btnDesativar").attr("href", link + "/desativarUser" + id);
     myModal.show();
     }
 
@@ -229,8 +258,8 @@ active
     keyboard: false
     });
     var link = $("#btnAtivar").attr("href");
-    $("#pAtivar").html("Ao confirmar você irá ativar o representante: " + nome + "!");
-    $("#btnAtivar").attr("href", link + "/ativarRep" + id);
+    $("#pAtivar").html("Ao confirmar você irá ativar o usuário: " + nome + "!");
+    $("#btnAtivar").attr("href", link + "/ativarUser" + id);
     myModal.show();
     }
 
@@ -239,49 +268,8 @@ active
     keyboard: false
     });
     var link = $("#btnDeletar").attr("href");
-    $("#pDeletar").html("Ao confirmar você irá deletar o representante: " + nome + ", é uma ação permanente, tem certeza?");
-    $("#btnDeletar").attr("href", link + "/deletarRep" + id);
+    $("#pDeletar").html("Ao confirmar você irá deletar o usuário: " + nome + ", é uma ação permanente, tem certeza?");
+    $("#btnDeletar").attr("href", link + "/deletarUser" + id);
     myModal.show();
     }
-
-    function buscarCidades() {
-    $("#cidade").html("");
-    var uf = $("#estado").val();
-    var append = "";
-    if (!$("#divCidade").hasClass('hidden')) {
-    $("#divCidade").addClass('hidden');
-    }
-
-    $("#loader").removeClass('hidden');
-    var link = "buscarCidadesAtivas" + uf;
-    $.ajax({
-    url: link,
-            type: 'GET',
-            dataType: 'json',
-            success: function (data) {
-            if (data) {
-            for (i in data) {
-            append += "<option class='form-control' value='" + data[i].id + "'>"
-                    + data[i].nome + "</option>";
-            }
-            $("#cidade").html(append);
-            $("#loader").addClass('hidden');
-            $("#divCidade").removeClass('hidden');
-            }
-            }
-    });
-    }
 </script>
-<script type="text/javascript" src="{{url('js/jquery.mask.js')}}"></script>
-<script type="text/javascript">
-    $("#addRep").submit(function () {
-    $("#tel1").unmask();
-    $("#tel2").unmask();
-    $("#addRep").submit();
-    });
-    $(document).ready(function () {
-    $("#tel1").mask("(00) 00009-0000");
-    $("#tel2").mask("(00) 00009-0000");
-    });
-</script>
-@endsection

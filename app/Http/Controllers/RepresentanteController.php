@@ -25,17 +25,18 @@ class RepresentanteController extends Controller {
      * Display a listing of the resource.
      */
     public function index() {
-        $representantes = $this->obj->orderBy('nome')->get();
+        $representantes = $this->obj->orderBy('nome')->where('active', '=', 1)->get();
+        $desativados = $this->obj->orderBy('nome')->where('active', '=', 0)->get();
         $estados = $this->estado->join('cidade', 'estado.id', 'cidade.uf')
                 ->select('estado.*')
                 ->where('cidade.atendida', '=', 1)
                 ->groupBy('estado.id')
                 ->orderBy('estado.nome')
                 ->get();
-        
+
 //        dd($estados);
-        
-        return view('representantes.index', ['representantes' => $representantes, 'estados' => $estados]);
+
+        return view('representantes.index', ['representantes' => $representantes, 'estados' => $estados, 'desativados' => $desativados]);
     }
 
     /**
@@ -49,7 +50,26 @@ class RepresentanteController extends Controller {
      * Store a newly created resource in storage.
      */
     public function store(Request $request) {
-        //
+        $data = $this->obj->create([
+            'cidade_id' => $request->cidade,
+            'nome' => $request->nome,
+            'sexo' => $request->sexo,
+            'tel1' => $request->tel1,
+            'tel2' => $request->tel2,
+            'uf' => $request->estado,
+            'apelido' => $request->apelido,
+            'cargo' => $request->cargo,
+            'formacao' => $request->formacao,
+            'active' => 1
+        ]);
+
+        if ($data) {
+            $msg = "Representante cadastrado com sucesso!";
+            return redirect('dashboard/representantes')->with('msg', $msg);
+        } else {
+            $msg = "Erro ao cadastrar Representante, contate o administrador!";
+            return redirect('dashboard/representantes')->with(['msg' => $msg, 'danger' => "danger"]);
+        }
     }
 
     /**
@@ -70,14 +90,50 @@ class RepresentanteController extends Controller {
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id) {
-        //
+        
+    }
+
+    public function ativar($id) {
+        $data = $this->obj->where('id', $id)->update([
+            'active' => 1
+        ]);
+
+        if ($data) {
+            $msg = "Representante ativado com sucesso!";
+            return redirect('dashboard/representantes')->with('msg', $msg);
+        } else {
+            $msg = "Erro ao ativar Representante, contate o administrador!";
+            return redirect('dashboard/representantes')->with(['msg' => $msg, 'danger' => "danger"]);
+        }
+    }
+
+    public function desativar($id) {
+        $data = $this->obj->where('id', $id)->update([
+            'active' => 0
+        ]);
+
+        if ($data) {
+            $msg = "Representante desativado com sucesso!";
+            return redirect('dashboard/representantes')->with('msg', $msg);
+        } else {
+            $msg = "Erro ao desativar Representante, contate o administrador!";
+            return redirect('dashboard/representantes')->with(['msg' => $msg, 'danger' => "danger"]);
+        }
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id) {
-        //
+    public function destroy($id) {
+        $del = $this->obj->destroy($id);
+
+        if ($del) {
+            $msg = "Representante excluído com sucesso!";
+            return redirect('dashboard/representantes')->with(['msg' => $msg]);
+        } else {
+            $msg = "Erro ao deletar o representante!";
+            return redirect('dashboard/representantes')->with(['msg' => $msg, 'danger' => "danger"]);
+        }
     }
 
 }

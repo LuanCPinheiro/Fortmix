@@ -134,7 +134,7 @@ active
                             </div>
                             <div class="ms-3">
                                 <p class="mb-2">Ligue para nós</p>
-                                <h5 class="mb-0">(67) 3030-9999</h5>
+                                <h5 class="mb-0">(67) 3596-3498</h5>
                             </div>
                         </div>
                     </a>

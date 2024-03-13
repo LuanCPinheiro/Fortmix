@@ -135,7 +135,7 @@ active
                 </p>
                 <div class="d-flex align-items-center mb-4">
                     <div class="flex-shrink-0 bg-primary p-4">
-                        <h1 class="display-2 text-white">20</h1>
+                        <h1 class="display-1 text-white">20</h1>
                         <h5 class="text-white">Anos de</h5>
                         <h5 class="text-white">Tradição</h5>
                     </div>
@@ -148,7 +148,7 @@ active
                     </div>
                 </div>
                 <div class="row pt-2">
-                    <div class="col-sm-6">
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=5567981539267&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site." class="col-sm-6">
                         <div class="d-flex align-items-center">
                             <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
                                 <i class="fa-brands fa-whatsapp text-white"></i>
@@ -158,18 +158,18 @@ active
                                 <h5 class="mb-0">(67) 98153-9267</h5>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
+                    </a>
+                    <a target="_blank" href="tel:+556735963498" class="col-sm-6">
                         <div class="d-flex align-items-center">
                             <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
                                 <i class="fa fa-phone-alt text-white"></i>
                             </div>
                             <div class="ms-3">
                                 <p class="mb-2">Ligue para nós</p>
-                                <h5 class="mb-0">(67) 3030-9999</h5>
+                                <h5 class="mb-0">(67) 3596-3498</h5>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

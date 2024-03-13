@@ -186,8 +186,10 @@
         <script src="lib/counterup/counterup.min.js"></script>
 
         <!-- Template Javascript -->
-        <script src="js/main.js"></script>
+        
         @yield('endfiles')
+        
+        <script src="js/main.js"></script>
     </body>
 
 </html>

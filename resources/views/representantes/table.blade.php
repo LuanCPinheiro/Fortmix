@@ -43,7 +43,11 @@
                                 <td>
                                     <div class="d-flex px-2 py-1">
                                         <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm"></h6>
+                                            <button type="button" onclick="desativar({{$rep->id}}, '{{$rep->nome}}')"
+                                                    class="btn btn-danger btn-tooltip" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="Desativar Representante" data-container="body" data-animation="true">
+                                                <i class="fas fa-ban"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </td>

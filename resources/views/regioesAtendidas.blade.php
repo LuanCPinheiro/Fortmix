@@ -28,9 +28,6 @@ Regiões Atendidas - Fortmix Nutrição Animal
 active
 @endsection
 
-@section('endfiles')
-@endsection
-
 @section('content')
 <!-- Service Start -->
 <div class="container-xxl py-5">
@@ -140,24 +137,23 @@ active
 </div>
 <!-- Service End -->
 
-@include('modalCidades', ['uf' => "MS",
-'estado' => "Mato Grosso do Sul",
-'cidades' => $cidadesMS])
+@include('modalCidades', ['uf' => "MS", 'estado' => "Mato Grosso do Sul", 'cidades' => $cidadesMS])
 
-@include('modalCidades', ['uf' => "MT",
-'estado' => "Mato Grosso",
-'cidades' => $cidadesMT])
+@include('modalCidades', ['uf' => "MT", 'estado' => "Mato Grosso", 'cidades' => $cidadesMT])
 
-@include('modalCidades', ['uf' => "GO",
-'estado' => "Goiás",
-'cidades' => $cidadesGO])
+@include('modalCidades', ['uf' => "GO", 'estado' => "Goiás", 'cidades' => $cidadesGO])
 
-@include('modalCidades', ['uf' => "SP",
-'estado' => "São Paulo",
-'cidades' => $cidadesSP])
+@include('modalCidades', ['uf' => "SP", 'estado' => "São Paulo", 'cidades' => $cidadesSP])
 
-@include('modalCidades', ['uf' => "MG",
-'estado' => "Minas Gerais",
-'cidades' => $cidadesMG])
+@include('modalCidades', ['uf' => "MG", 'estado' => "Minas Gerais", 'cidades' => $cidadesMG])
 
+@endsection
+
+@section('endfiles')
+<script type="text/javascript" src="{{url('js/jquery.mask.js')}}"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    $('.telmask').mask("(00) 00009-0000");
+});
+</script>
 @endsection
