@@ -25,7 +25,7 @@ class RepresentanteController extends Controller {
      * Display a listing of the resource.
      */
     public function index() {
-        $representantes = $this->obj->orderBy('nome')->where('active', '=', 1)->get();
+        $representantes = $this->obj->orderby('cidade_id')->orderBy('nome')->where('active', '=', 1)->get();
         $desativados = $this->obj->orderBy('nome')->where('active', '=', 0)->get();
         $estados = $this->estado->join('cidade', 'estado.id', 'cidade.uf')
                 ->select('estado.*')

@@ -53,7 +53,7 @@ active
                             <p class="text-white mb-0">Veja as cidades atendidas e nossos representantes no Mato Grosso do Sul</p>
                         </div>
                     </div>
-                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalMS">Ver Cidades</button>
+                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalMS">Econtrar Representantes</button>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -72,7 +72,7 @@ active
                             <p class="text-white mb-0">Veja as cidades atendidas e nossos representantes no Mato Grosso</p>
                         </div>
                     </div>
-                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalMT">Ver Cidades</button>
+                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalMT">Econtrar Representantes</button>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -91,7 +91,7 @@ active
                             <p class="text-white mb-0">Veja as cidades atendidas e nossos representantes em Goiás</p>
                         </div>
                     </div>
-                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalGO">Ver Cidades</button>
+                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalGO">Econtrar Representantes</button>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -110,7 +110,7 @@ active
                             <p class="text-white mb-0">Veja as cidades atendidas e nossos representantes em São Paulo</p>
                         </div>
                     </div>
-                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalSP">Ver Cidades</button>
+                    <button class="btn btn-light p-4" data-bs-toggle="modal" data-bs-target="#modalSP">Econtrar Representantes</button>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -129,7 +129,7 @@ active
                             <p class="text-white mb-0">Veja as cidades atendidas e nossos representantes em Minas Gerais</p>
                         </div>
                     </div>
-                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalMG">Ver Cidades</button>
+                    <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#modalMG">Econtrar Representantes</button>
                 </div>
             </div>                
         </div>

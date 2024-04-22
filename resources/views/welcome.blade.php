@@ -5,15 +5,15 @@ FortMix Nutrição Animal - Entregando resultado aos pecuaristas!
 @endsection
 
 @section('seo')
-<link rel="canonical" href=""/>
+<link rel="canonical" href="www.fortmixnutricao.com.br"/>
 <meta name="robots" content="index, follow, max-image-preview:large"/>
-<meta name="description" content="">
+<meta name="description" content="Há 20 anos atuando no mercado de nutrição animal - Cassilândia - MS">
 @endsection
 
 @section('ogcontent')
-<meta property="og:url" content="">
-<meta property="og:title" content="">
-<meta property="og:image" content="">
+<meta property="og:url" content="www.fortmixnutricao.com.br">
+<meta property="og:title" content="FortMix Nutrição Animal - Entregando resultado aos pecuaristas!">
+<meta property="og:image" content="Há 20 anos atuando no mercado de nutrição animal - Cassilândia - MS">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="800">
 <meta property="og:image:height" content="600">
@@ -35,31 +35,31 @@ active
 <div class="container-fluid px-0 mb-5">
     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="w-100" src="img/carousel-1.jpg" alt="Image">
-                <div class="carousel-caption">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-10 text-start">
-                                <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">20 anos de experiência
-                                    entregando qualidade</p>
-                                <h1 class="display-1 text-white mb-5 animated slideInRight">Produtos de Qualidade Comprovada!</h1>
-                                <a href="/contato" class="btn btn-primary py-3 px-5 animated slideInRight">Entrar em contato</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="carousel-item">
                 <img class="w-100" src="img/carousel-2.jpg" alt="Image">
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-10 text-start">
-                                <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">20 anos de experiência
+                                <p class="fs-5 fw-medium text-white text-uppercase animated slideInRight">20 anos de experiência
                                     proporcionando resultados ao pecuarista</p>
                                 <h1 class="display-1 text-white mb-5 animated slideInRight">FortMix: Tradição, Parceria e Qualidade!</h1>
                                 <a href="/sobrenos" class="btn btn-primary py-3 px-5 animated slideInRight">Sobre Nós</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item active">
+                <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 text-start">
+                                <p class="fs-5 fw-medium text-white text-uppercase animated slideInRight">20 anos de experiência
+                                    entregando qualidade</p>
+                                <h1 class="display-1 text-white mb-5 animated slideInRight">Produtos de Qualidade Comprovada!</h1>
+                                <a href="/contato" class="btn btn-primary py-3 px-5 animated slideInRight">Entrar em contato</a>
                             </div>
                         </div>
                     </div>
@@ -405,7 +405,8 @@ active
             <h1 class="display-5 mb-5">Um time de Sucesso!</h1>
         </div>
         <div class="row g-4">
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <img class="img-fluid" src="img/equipe-site.png" alt="equipes_fortmix"/>
+<!--            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-item">
                     <img class="img-fluid" src="img/team-1.jpg" alt="">
                     <div class="d-flex">
@@ -417,12 +418,14 @@ active
                             <h5>Leandro Romero</h5>
                             <span class="text-primary">Sócio-Fundador</span>
                             <div class="team-social">
+                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href="https://api.whatsapp.com/send?phone=5567981149182">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href="mailto:leandro.romero@fortmixnutricao.com.br">
+                                    <i class="fa fa-envelope-open"></i>
+                                </a>
                                 <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fa-brands fa-whatsapp"></i></a>
-                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fa fa-envelope-open"></i></a>
-<!--                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fab fa-linkedin"></i></a>-->
+                                        class="fab fa-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
@@ -440,10 +443,12 @@ active
                             <h5>Daniela Romero</h5>
                             <span class="text-primary">Sócia-Proprietária</span>
                             <div class="team-social">
-                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fa-brands fa-whatsapp"></i></a>
-                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fa fa-envelope-open"></i></a>
+                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href="https://api.whatsapp.com/send?phone=5567981149201">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href="mailto:daniela.romero@fortmixnutricao.com.br">
+                                    <i class="fa fa-envelope-open"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -461,10 +466,12 @@ active
                             <h5>Maycon Oliveira</h5>
                             <span class="text-primary">Diretor</span>
                             <div class="team-social">
-                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fa-brands fa-whatsapp"></i></a>
-                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fa fa-envelope-open"></i></a>
+                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href="https://api.whatsapp.com/send?phone=556782110048">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href="mailto:maycon.oliveira@fortmixnutricao.com.br">
+                                    <i class="fa fa-envelope-open"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -482,15 +489,17 @@ active
                             <h5>Luis Guarini</h5>
                             <span class="text-primary">Vendas</span>
                             <div class="team-social">
-                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fa-brands fa-whatsapp"></i></a>
-                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href=""><i
-                                        class="fa fa-envelope-open"></i></a>
+                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href="https://api.whatsapp.com/send?phone=5567984754883">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a>
+                                <a target="_blank" class="btn btn-square btn-dark rounded-circle mx-1" href="mailto:vendas@fortmixnutricao.com.br">
+                                    <i class="fa fa-envelope-open"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </div>

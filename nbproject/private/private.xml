@@ -16,46 +16,53 @@
             <file>file:/D:/wamp64/www/Fortmix/public/js/main.js</file>
             <file>file:/D:/wamp64/www/Fortmix/resources/views/layouts/app.blade.php</file>
             <file>file:/D:/wamp64/www/Fortmix/resources/views/cidades/index.blade.php</file>
-            <file>file:/D:/wamp64/www/Fortmix/database/migrations/2024_03_11_141130_create_representante_tabl.php</file>
-            <file>file:/D:/wamp64/www/Fortmix/app/Http/Controllers/RepresentanteController.php</file>
-            <file>file:/D:/wamp64/www/Fortmix/app/Http/Middleware/IsSuper.php</file>
             <file>file:/D:/wamp64/www/Fortmix/config/filesystems.php</file>
-            <file>file:/D:/wamp64/www/Fortmix/app/Http/Controllers/CidadeController.php</file>
-            <file>file:/D:/wamp64/www/Fortmix/public/dashboardAssets/assets/css/argon-dashboard.css</file>
-            <file>file:/D:/wamp64/www/Fortmix/app/Models/Representante.php</file>
-            <file>file:/D:/wamp64/www/Fortmix/config/app.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/app/Http/Controllers/Controller.php</file>
             <file>file:/D:/wamp64/www/Fortmix/app/Http/Controllers/EstadoController.php</file>
-            <file>file:/D:/wamp64/www/Fortmix/resources/views/layouts/dashboardLayout.blade.php</file>
-            <file>file:/D:/wamp64/www/Fortmix/resources/views/layouts/navigation.blade.php</file>
             <file>file:/D:/wamp64/www/Fortmix/public/css/bootstrap.min.css</file>
-            <file>file:/D:/wamp64/www/Fortmix/resources/views/layouts/layout.blade.php</file>
             <file>file:/D:/wamp64/www/Fortmix/resources/views/regioesAtendidas.blade.php</file>
-            <file>file:/D:/wamp64/www/Fortmix/resources/views/representantes/index.blade.php</file>
             <file>file:/D:/wamp64/www/Fortmix/resources/views/welcome.blade.php</file>
-            <file>file:/D:/wamp64/www/Fortmix/app/Models/User.php</file>
             <file>file:/D:/wamp64/www/Fortmix/app/Models/Estado.php</file>
-            <file>file:/D:/wamp64/www/Fortmix/resources/views/contato.blade.php</file>
-            <file>file:/D:/wamp64/www/Fortmix/config/services.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/resources/views/representantes/table.blade.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/app/Http/Controllers/UserController.php</file>
             <file>file:/D:/wamp64/www/Fortmix/resources/views/sobrenos.blade.php</file>
-            <file>file:/D:/wamp64/www/Fortmix/.env</file>
-            <file>file:/D:/wamp64/www/Fortmix/app/Http/Kernel.php</file>
             <file>file:/D:/wamp64/www/Fortmix/routes/web.php</file>
-            <file>file:/D:/wamp64/www/Fortmix/resources/views/profile/edit.blade.php</file>
-            <file>file:/D:/wamp64/www/Fortmix/app/Http/Middleware/IsAdmin.php</file>
             <file>file:/D:/wamp64/www/Fortmix/app/Http/Controllers/HomeController.php</file>
             <file>file:/D:/wamp64/www/Fortmix/resources/views/profile/partials/update-profile-information-form.blade.php</file>
             <file>file:/D:/wamp64/www/Fortmix/app/Http/Controllers/PaisController.php</file>
             <file>file:/D:/wamp64/www/Fortmix/resources/views/auth/login.blade.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/resources/views/usuarios/index.blade.php</file>
             <file>file:/D:/wamp64/www/Fortmix/resources/views/dashboard.blade.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/resources/views/profile/edit.blade_1.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/bootstrap/app.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/database/migrations/2024_03_11_141130_create_representante_tabl.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/app/Http/Controllers/RepresentanteController.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/app/Http/Middleware/IsSuper.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/app/Http/Controllers/CidadeController.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/public/dashboardAssets/assets/css/argon-dashboard.css</file>
+            <file>file:/D:/wamp64/www/Fortmix/app/Models/Representante.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/config/app.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/app/Http/Controllers/ProfileController.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/resources/views/layouts/dashboardLayout.blade.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/resources/views/layouts/navigation.blade.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/resources/views/layouts/layout.blade.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/resources/views/representantes/index.blade.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/app/Models/User.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/resources/views/usuarios/cadUser.blade.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/resources/views/contato.blade.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/config/services.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/.env</file>
+            <file>file:/D:/wamp64/www/Fortmix/app/Http/Kernel.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/resources/views/modalCidades.blade.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/resources/views/profile/edit.blade.php</file>
+            <file>file:/D:/wamp64/www/Fortmix/app/Http/Middleware/IsAdmin.php</file>
             <file>file:/D:/wamp64/www/Fortmix/resources/css/app.css</file>
             <file>file:/D:/wamp64/www/Fortmix/public/css/style.css</file>
             <file>file:/D:/wamp64/www/Fortmix/resources/views/profile/partials/update-password-form.blade.php</file>
             <file>file:/D:/wamp64/www/Fortmix/app/Models/Pais.php</file>
             <file>file:/D:/wamp64/www/Fortmix/config/mail.php</file>
             <file>file:/D:/wamp64/www/Fortmix/app/Models/Cidade.php</file>
-            <file>file:/D:/wamp64/www/Fortmix/resources/views/profile/edit.blade_1.php</file>
             <file>file:/D:/wamp64/www/Fortmix/database/migrations/migradas/2014_10_12_000000_create_users_table_1.php</file>
-            <file>file:/D:/wamp64/www/Fortmix/bootstrap/app.php</file>
             <file>file:/D:/wamp64/www/Fortmix/public/dashboardAssets/docs/documentation.html</file>
         </group>
     </open-files>

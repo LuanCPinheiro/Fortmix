@@ -64,6 +64,10 @@ active
             <p>Temos técnicos qualificados e representantes comerciais nos principais centros consumidores de Mato Grosso do Sul, Mato Grosso, Goiás, Minas Gerais e São Paulo.</p>
             <p>Nosso portifólio contém mais de 30 produtos destinados a atender a necessidade de cada cliente em cada categoria animal nas diversas épocas do ano.</p>
             <h2>Esta é a FORTMIX NUTRIÇÃO ANIMAL, desde 2004 produzindo qualidade.</h2>
+            <div class="col-5 float-center">
+                <img class="img-fluid" alt="foto_de_leandro_e_daniela_socios_da_fortmix" src="img/socios-site.png"/>
+                Sócios-fundadores da FortMix, Leandro e Daniela.
+            </div>
         </div>
     </div>
 </div>
