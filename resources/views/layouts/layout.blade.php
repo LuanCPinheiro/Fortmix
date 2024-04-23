@@ -141,9 +141,9 @@
                     <div class="col-lg-4 col-md-6">
                         <h5 class="text-white mb-4">Expediente</h5>
                         <p class="mb-1">Segunda - Sexta</p>
-                        <h6 class="text-light">07:30 - 17:30</h6>
+                        <h6 class="text-light">08h às 18h - Horário de Brasília</h6>
                         <p class="mb-1">Sábado</p>
-                        <h6 class="text-light">07:30 - 11:30</h6>
+                        <h6 class="text-light">8h às 12h - Horário de Brasília</h6>
                         <p class="mb-1">Domingos e Feriados</p>
                         <h6 class="text-light">Fechado</h6>
                     </div>
