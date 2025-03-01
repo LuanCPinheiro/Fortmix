@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Representante;
+use App\Models\User;
 use App\Models\Cidade;
 use App\Models\Estado;
 use Illuminate\Support\Facades\Storage;
@@ -11,12 +11,11 @@ use Illuminate\Support\Facades\Storage;
 class RepresentanteController extends Controller {
 
     private $obj;
-    private $user;
     private $cidade;
     private $estado;
 
     public function __construct() {
-        $this->obj = new Representante();
+        $this->obj = new User();
         $this->cidade = new Cidade();
         $this->estado = new Estado();
     }
@@ -25,8 +24,8 @@ class RepresentanteController extends Controller {
      * Display a listing of the resource.
      */
     public function index() {
-        $representantes = $this->obj->orderby('cidade_id')->orderBy('nome')->where('active', '=', 1)->get();
-        $desativados = $this->obj->orderBy('nome')->where('active', '=', 0)->get();
+        $representantes = $this->obj->orderby('cidade_id')->orderBy('name')->where('repactive', '=', 1)->get();
+        $desativados = $this->obj->orderBy('name')->where('active', '=', 0)->where('repactive', '=', 0)->get();
         $estados = $this->estado->join('cidade', 'estado.id', 'cidade.uf')
                 ->select('estado.*')
                 ->where('cidade.atendida', '=', 1)
@@ -37,6 +36,18 @@ class RepresentanteController extends Controller {
 //        dd($estados);
 
         return view('representantes.index', ['representantes' => $representantes, 'estados' => $estados, 'desativados' => $desativados]);
+    }
+
+    public function cidadesAtendidas($userId) {
+        $user = $this->obj->find($userId);
+        return response()->json($user->cidades()->get(['id', 'nome'])->toArray());
+    }
+
+    public function salvarCidadesAtendidas(Request $request, $userId) {
+        $user = $this->obj->find($userId);
+        $cidades = collect($request->input('cidades'))->pluck('id');
+        $user->cidades()->sync($cidades);
+        return response()->json(['success' => true]);
     }
 
     /**
@@ -50,17 +61,20 @@ class RepresentanteController extends Controller {
      * Store a newly created resource in storage.
      */
     public function store(Request $request) {
+        $estado = $this->estado->find($request->estado);
         $data = $this->obj->create([
             'cidade_id' => $request->cidade,
-            'nome' => $request->nome,
+            'name' => $request->nome,
             'sexo' => $request->sexo,
             'tel1' => $request->tel1,
             'tel2' => $request->tel2,
-            'uf' => $request->estado,
+            'uf' => $estado->uf,
             'apelido' => $request->apelido,
             'cargo' => $request->cargo,
             'formacao' => $request->formacao,
-            'active' => 1
+            'nivelpermissao' => 2,
+            'active' => 1,
+            'repactive' => 1
         ]);
 
         if ($data) {
@@ -95,7 +109,8 @@ class RepresentanteController extends Controller {
 
     public function ativar($id) {
         $data = $this->obj->where('id', $id)->update([
-            'active' => 1
+            'active' => 1,
+            'repactive' => 1
         ]);
 
         if ($data) {
@@ -109,7 +124,8 @@ class RepresentanteController extends Controller {
 
     public function desativar($id) {
         $data = $this->obj->where('id', $id)->update([
-            'active' => 0
+            'active' => 0,
+            'repactive' => 0
         ]);
 
         if ($data) {

@@ -15,7 +15,7 @@
                     <div class="col-auto mb-2">
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
-                                <h5 class="card-title">{{$rep->nome}}</h5>
+                                <h5 class="card-title">{{$rep->name}}</h5>
                                 <h6 class="card-subtitle mb-2 text-muted">{{$rep->cargo}}</h6>
                                 @if($rep->formacao !== null && $rep->formacao !== "")
                                 <p class="card-text">

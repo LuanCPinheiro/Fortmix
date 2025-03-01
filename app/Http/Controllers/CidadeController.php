@@ -63,7 +63,7 @@ class CidadeController extends Controller {
 
         return json_encode($retorno);
     }
-    
+
     public function buscarCidadesAtivas($uf) {
         $estado = $this->estado->where('uf', 'like', $uf)->first();
         $cidades = $this->obj->where('uf', '=', $estado->id)->where('atendida', '=', 1)->get();
@@ -78,6 +78,12 @@ class CidadeController extends Controller {
         }
 
         return json_encode($retorno);
+    }
+
+    public function buscarCidades($estadoId) {
+        return response()->json(
+                        $this->obj->where('uf', $estadoId)->get()
+        );
     }
 
 }

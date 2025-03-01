@@ -22,7 +22,7 @@
                                 <td>
                                     <div class="d-flex px-2 py-1">
                                         <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm">{{$rep->nome}}</h6>
+                                            <h6 class="mb-0 text-sm">{{$rep->name}}</h6>
                                         </div>
                                     </div>
                                 </td>
@@ -46,7 +46,10 @@
                                             <button type="button" onclick="desativar({{$rep->id}}, '{{$rep->nome}}')"
                                                     class="btn btn-danger btn-tooltip" data-bs-toggle="tooltip" data-bs-placement="top"
                                                     title="Desativar Representante" data-container="body" data-animation="true">
-                                                <i class="fas fa-ban"></i>
+                                                <i class="fas fa-ban"></i> Desativar
+                                            </button>
+                                            <button type="button" onclick="showRegioesModal({{$rep->id}}, '{{$rep->name}}')" class="btn btn-info">
+                                                Regiões Atendidas
                                             </button>
                                         </div>
                                     </div>

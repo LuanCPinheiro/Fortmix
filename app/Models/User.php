@@ -25,6 +25,16 @@ class User extends Authenticatable {
         'password',
         'nivelpermissao',
         'active',
+        'cidade_id',
+        'sexo',
+        'tel1',
+        'tel2',
+        'uf',
+        'apelido',
+        'cargo',
+        'formacao',
+        'repactive',
+        'tipo'
     ];
 
     /**
@@ -54,6 +64,22 @@ class User extends Authenticatable {
             return false;
         }
     }
+
+    public function onlySuper() {
+        if ($this->nivelpermissao === 5) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function isRepresentante() {
+        if ($this->nivelpermissao === 2) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     
     public function isAdmin() {
         if ($this->nivelpermissao === 6) {
@@ -61,6 +87,15 @@ class User extends Authenticatable {
         } else {
             return false;
         }
+    }
+
+    public function cidade() {
+        return $this->hasOne(Cidade::class, 'ibge', 'cidade_id');
+    }
+
+    // Define o relacionamento muitos para muitos com Cidade
+    public function cidades() {
+        return $this->belongsToMany(Cidade::class, 'representante_cidade', 'user_id', 'cidade_id');
     }
 
 }

@@ -370,19 +370,19 @@ h6,
 .service-item {
     position: relative;
     margin: 65px 0 25px 0;
-    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .07);
 }
 
 .service-item .service-img {
     position: absolute;
-    padding: 12px;
     width: 130px;
     height: 130px;
     top: -65px;
     left: 50%;
     transform: translateX(-50%);
     background: #FFFFFF;
-    box-shadow: 0 0 45px rgba(0, 0, 0, .09);
+    border-radius: 15%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .6);
     z-index: 2;
 }
 
@@ -453,7 +453,8 @@ h6,
 
 .service-item .btn {
     position: absolute;
-    width: 130px;
+    padding: 10% !important;
+    max-width: 60%;
     height: 50px;
     left: 50%;
     bottom: -25px;
@@ -464,7 +465,8 @@ h6,
     color: var(--secondary);
     background: #FFFFFF;
     border: none;
-    box-shadow: 0 0 45px rgba(0, 0, 0, .09);
+    border-radius: 5% !important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
     z-index: 2;
 }
 

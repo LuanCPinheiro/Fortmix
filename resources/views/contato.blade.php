@@ -23,7 +23,7 @@ FortMix Nutrição Animal - Entregando resultado aos pecuaristas!
 @section('headerfiles')
 @endsection
 
-@section('inicio')
+@section('contato')
 active
 @endsection
 
@@ -51,8 +51,8 @@ active
                         <i class="fa fa-whatsapp fa-2x text-primary"></i>
                     </div>
                     <h4 class="mb-3">WhatsApp</h4>
-                    <p class="mb-2">(67) 98153-9267</p>
-                    <a target="_blank" class="btn btn-primary px-4" href="https://api.whatsapp.com/send?phone=5567981539267&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site.">Enviar mensagem</a>
+                    <p class="mb-2">(67) 8475-4883</p>
+                    <a target="_blank" class="btn btn-primary px-4" href="https://api.whatsapp.com/send?phone=556784754883&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site.">Enviar mensagem</a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -133,7 +133,7 @@ active
                         <i class="fa-solid fa-industry fa-2x text-primary"></i>
                     </div>
                     <h4 class="mb-3">Produção</h4>
-                    <h6 class="mb-4">Sirley D. da Silva</h6>
+                    <h6 class="mb-4">Lucas Montelo</h6>
                     <p class="mb-4">(67) 99937-3498</p>
                     <a target="_blank" class="btn btn-primary px-4" href="tel:+5567999373498">Ligar</a>
                     <a target="_blank" class="btn btn-primary px-4"

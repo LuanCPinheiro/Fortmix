@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Estado;
-use App\Models\Representante;
+use App\Models\User;
 
 class Cidade extends Model {
 
@@ -23,8 +23,9 @@ class Cidade extends Model {
         return $this->hasOne(Estado::class, 'id', 'uf');
     }
     
+    // Define o relacionamento muitos para muitos com User
     public function representantes() {
-        return $this->hasMany(Representante::class, 'cidade_id', 'id');
+        return $this->belongsToMany(User::class, 'representante_cidade', 'cidade_id', 'user_id');
     }
 
 }

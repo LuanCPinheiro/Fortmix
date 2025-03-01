@@ -84,6 +84,7 @@ active
                     <table class="table align-items-center mb-0">
                         <thead>
                             <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">ID</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nome</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Cidade/Estado</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Contato</th>
@@ -96,7 +97,14 @@ active
                                 <td>
                                     <div class="d-flex px-2 py-1">
                                         <div class="d-flex flex-column justify-content-center">
-                                            <h6 class="mb-0 text-sm">{{$rep->nome}}</h6>
+                                            <h6 class="mb-0 text-sm">{{$rep->id}}</h6>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex px-2 py-1">
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="mb-0 text-sm">{{$rep->name}}</h6>
                                         </div>
                                     </div>
                                 </td>
@@ -117,15 +125,15 @@ active
                                 <td>
                                     <div class="d-flex px-2 py-1">
                                         <div class="d-flex flex-column justify-content-center">
-                                            <button type="button" onclick="ativar({{$rep->id}}, '{{$rep->nome}}')"
-                                               class="btn btn-success btn-tooltip" data-bs-toggle="tooltip"
-                                               data-bs-placement="top" title="Ativar Representante" data-container="body"
-                                               data-animation="true"><i class="fas fa-check"></i></button>
+                                            <button type="button" onclick="ativar({{$rep->id}}, '{{$rep->name}}')"
+                                                    class="btn btn-success btn-tooltip" data-bs-toggle="tooltip"
+                                                    data-bs-placement="top" title="Ativar Representante" data-container="body"
+                                                    data-animation="true"><i class="fas fa-check"></i>Ativar</button>
 
-                                            <button type="button" onclick="deletar({{$rep->id}}, '{{$rep->nome}}')"
-                                               class="btn btn-danger btn-tooltip" data-bs-toggle="tooltip"
-                                               data-bs-placement="top" title="Excluir Representante" data-container="body"
-                                               data-animation="true"><i class="fas fa-trash"></i></button>
+                                            <button type="button" onclick="deletar({{$rep->id}}, '{{$rep->name}}')"
+                                                    class="btn btn-danger btn-tooltip" data-bs-toggle="tooltip"
+                                                    data-bs-placement="top" title="Excluir Representante" data-container="body"
+                                                    data-animation="true"><i class="fas fa-trash"></i>Deletar</button>
                                         </div>
                                     </div>
                                 </td>
@@ -210,6 +218,59 @@ active
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="modal-regioes" tabindex="-1" aria-labelledby="modalRegioesLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Regiões Atendidas por <span id="repName"></span></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Seletor de Estado -->
+                <div class="mb-3">
+                    <label for="estadoSelect" class="form-label">Estado</label>
+                    <select id="estadoSelect" class="form-control" onchange="fetchCidades(this.value)">
+                        <option value="">Selecione um Estado</option>
+                        @foreach($estados as $estado)
+                        <option value="{{ $estado->id }}">{{ $estado->nome }}</option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <!-- Seletor de Cidade -->
+                <div id="cidadeSelectDiv" class="mb-3 d-none">
+                    <label for="cidadeSelect" class="form-label">Cidade</label>
+                    <select id="cidadeSelect" class="form-control">
+                        <option value="">Selecione uma Cidade</option>
+                        <!-- Cidades serão carregadas via AJAX -->
+                    </select>
+                    <button type="button" class="btn btn-primary mt-2" onclick="addCidade()">Cadastrar</button>
+                </div>
+
+                <!-- Tabela de Cidades Atendidas -->
+                <h6>Cidades Atendidas</h6>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Cidade</th>
+                            <th>Estado</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cidadesAtendidasTable">
+                        <!-- Cidades atendidas serão carregadas aqui -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-success" onclick="saveCidadesAtendidas()">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 @endsection
 
 @section('endfiles')
@@ -245,34 +306,112 @@ active
     }
 
     function buscarCidades() {
-    $("#cidade").html("");
-    var uf = $("#estado").val();
-    var append = "";
-    if (!$("#divCidade").hasClass('hidden')) {
-    $("#divCidade").addClass('hidden');
-    }
+    $("#cidade").empty(); // Limpa as opções do seletor de cidades
 
-    $("#loader").removeClass('hidden');
-    var link = "buscarCidadesAtivas" + uf;
+    var uf = $("#estado").val(); // Obtém o estado selecionado
+    if (!uf) return; // Garante que um estado foi selecionado
+
+    $("#divCidade").addClass('d-none'); // Oculta o seletor de cidade inicialmente
+    $("#loader").removeClass('d-none'); // Exibe o loader
+
+    var link = `buscarCidades/${uf}`;
     $.ajax({
     url: link,
             type: 'GET',
             dataType: 'json',
             success: function (data) {
-            if (data) {
-            for (i in data) {
-            append += "<option class='form-control' value='" + data[i].id + "'>"
-                    + data[i].nome + "</option>";
+            if (data && data.length > 0) { // Verifica se há cidades retornadas
+            // Adiciona cada cidade como uma nova opção
+            data.forEach(cidade => {
+            $("#cidade").append(`<option class='form-control' value='${cidade.id}'>${cidade.nome}</option>`);
+            });
+            $("#divCidade").removeClass('d-none'); // Mostra o seletor de cidade
             }
-            $("#cidade").html(append);
-            $("#loader").addClass('hidden');
-            $("#divCidade").removeClass('hidden');
-            }
+            $("#loader").addClass('d-none'); // Oculta o loader
+            },
+            error: function() {
+            console.error("Erro ao buscar cidades.");
+            $("#loader").addClass('d-none'); // Oculta o loader em caso de erro
             }
     });
     }
 </script>
 <script type="text/javascript" src="{{url('js/jquery.mask.js')}}"></script>
+<script type="text/javascript">
+    let cidadesAtendidas = [];
+    let repId = null;
+    function showRegioesModal(id, nome) {
+    repId = id;
+    document.getElementById('repName').textContent = nome;
+    fetchCidadesAtendidas(id);
+    new bootstrap.Modal(document.getElementById('modal-regioes')).show();
+    }
+
+    function fetchCidades(estadoId) {
+    $.ajax({
+    url: `buscarCidades/${estadoId}`,
+            type: 'GET',
+            success: function(cidades) {
+            const cidadeSelect = $("#cidadeSelect");
+            cidadeSelect.empty().append('<option value="">Selecione uma Cidade</option>');
+            cidades.forEach(cidade => {
+            cidadeSelect.append(`<option value="${cidade.id}">${cidade.nome}</option>`);
+            });
+            $("#cidadeSelectDiv").removeClass("d-none");
+            }
+    });
+    }
+
+    function addCidade() {
+    const cidadeId = $("#cidadeSelect").val();
+    const cidadeNome = $("#cidadeSelect option:selected").text();
+    if (cidadeId) {
+    cidadesAtendidas.push({ id: cidadeId, nome: cidadeNome });
+    renderCidadesAtendidas();
+    }
+    }
+
+    function renderCidadesAtendidas() {
+    const tableBody = $("#cidadesAtendidasTable");
+    tableBody.empty();
+    cidadesAtendidas.forEach((cidade, index) => {
+    tableBody.append(`
+            <tr>
+                <td>${cidade.nome}</td>
+                <td><button type="button" onclick="removeCidade(${index})" class="btn btn-danger">X</button></td>
+            </tr>
+        `);
+    });
+    }
+
+    function removeCidade(index) {
+    cidadesAtendidas.splice(index, 1);
+    renderCidadesAtendidas();
+    }
+
+    function fetchCidadesAtendidas(repId) {
+    $.ajax({
+    url: `cidadesAtendidas/${repId}`,
+            type: 'GET',
+            success: function(data) {
+            cidadesAtendidas = data;
+            renderCidadesAtendidas();
+            }
+    });
+    }
+
+    function saveCidadesAtendidas() {
+    $.ajax({
+    url: `salvarCidadesAtendidas/${repId}`,
+            type: 'POST',
+            data: { cidades: cidadesAtendidas, _token: '{{ csrf_token() }}' },
+            success: function() {
+            alert('Regiões atendidas atualizadas com sucesso!');
+            $("#modal-regioes").modal('hide');
+            }
+    });
+    }
+</script>
 <script type="text/javascript">
     $("#addRep").submit(function () {
     $("#tel1").unmask();

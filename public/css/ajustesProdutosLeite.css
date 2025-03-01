@@ -1,0 +1,114 @@
+.card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra leve */
+    border: none; /* Remove borda padrão */
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02); /* Efeito suave ao passar o mouse */
+}
+
+/* Nome do Produto */
+.product-title-box {
+    background-color: #8B0000; /* Vermelho Escuro */
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Título das seções de uso */
+.usage-title-box {
+    background-color: #8B0000; /* Vermelho Escuro */
+    color: white;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* Texto das seções de uso */
+.usage-text {
+    font-size: 1rem;
+    color: #333;
+    text-align: justify;
+}
+
+/* Espaçamento entre ícones */
+.icon-spacing {
+    margin: 5px;
+}
+
+.icon-image {
+    width: auto;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Garantir mesma altura e largura para os botões */
+.icon-btn {
+    width: 120px; /* Largura fixa */
+    height: 120px; /* Altura fixa */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden; /* Para evitar conteúdo escapando */
+}
+
+/* Garantir que as imagens tenham a mesma altura */
+.icon-btn img {
+    height: 60px; /* Altura fixa para todas as imagens */
+    width: auto; /* Ajusta a largura automaticamente */
+    object-fit: contain; /* Garante que a imagem não seja cortada */
+    margin-bottom: 10px; /* Espaço entre imagem e texto */
+}
+
+/* Ajustes para mobile */
+@media (max-width: 767px) {
+    #filtrosEstagioAnimal .icon-btn {
+        margin-bottom: 15px; /* Espaçamento entre os botões no mobile */
+    }
+
+    .icon-btn {
+        width: 100px; /* Ajusta a largura dos botões no mobile */
+        height: 100px; /* Ajusta a altura dos botões no mobile */
+    }
+}
+
+/* Estilo do botão do WhatsApp */
+#whatsappButton {
+    background-color: #009933; /* Cor padrão do WhatsApp */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    border: none;
+    height: 10vh;
+}
+
+#whatsappButton i {
+    font-size: 1.5rem;
+}
+
+#whatsappButton:hover {
+    background-color: #006666; /* Tom mais escuro para o hover */
+    color: white;
+}
+
+@media(max-width: 767px) {
+    #modalSacaria {
+        max-width: 30vw !important;
+        height: auto !important;
+    }
+}
+
+.btn.btn-outline-primary.active {
+    color: white !important;
+}

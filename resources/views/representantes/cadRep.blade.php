@@ -54,26 +54,27 @@
                             <select onchange="buscarCidades()" class="form-control" required="true" name="estado" id="estado">
                                 <option value="">Selecione...</option>
                                 @foreach($estados as $estado)
-                                <option value="{{$estado->uf}}">{{$estado->nome}}</option>
+                                <option value="{{$estado->id}}">{{$estado->nome}}</option>
                                 @endforeach
                             </select>
                         </div>
-                        <div class="col-6 hidden" id="divCidade">
+                        <div class="col-6 d-none" id="divCidade"> <!-- Use d-none -->
                             <label for="cidade" class="form-control-label">Cidade:</label>
                             <select class="form-control" required="true" name="cidade" id="cidade">
                             </select>
                         </div>
-                        <div class="col-6 d-flex row justify-content-center hidden" id="loader">
-                                <label class="col-12 text-center form-control-label">
-                                    Buscando Cidades:
-                                </label>
-                                <div class="col-12 text-center">
-                                    <div class="spinner-border" role="status">
-                                        <span class="visually-hidden">Buscando Cidades</span>
-                                    </div>     
-                                </div>
+                        <div class="col-6 d-flex row justify-content-center d-none" id="loader"> <!-- Use d-none -->
+                            <label class="col-12 text-center form-control-label">
+                                Buscando Cidades:
+                            </label>
+                            <div class="col-12 text-center">
+                                <div class="spinner-border" role="status">
+                                    <span class="visually-hidden">Buscando Cidades</span>
+                                </div>     
                             </div>
+                        </div>
                     </div>
+
                     <div class="text-center" id="botao">
                         <button type="submit" class="btn bg-gradient-success btn-lg mt-4 mb-0">Cadastrar</button>
                     </div>

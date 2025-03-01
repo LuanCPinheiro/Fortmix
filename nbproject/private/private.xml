@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
-        <file>
-            <url>resources/views/welcome.blade.php</url>
-            <bookmark id="1">
-                <name/>
-                <line>0</line>
-                <key/>
-            </bookmark>
-        </file>
-    </editor-bookmarks>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/wamp64/www/Fortmix/resources/views/codeeditor.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/database/migrations/migradas/2025_02_25_173147_alter_users_table.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/.env</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/resources/views/produtoscorte.blade.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/database/migrations/2025_02_25_210631_create_clientes_table2.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/app/Http/Controllers/CidadeController.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/app/Http/Controllers/PostController.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/resources/views/representantes/index.blade.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/database/migrations/migradas/2025_02_25_175955_update_cpf_users2.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/resources/views/cidades/index.blade.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/resources/views/layouts/dashboardLayout.blade.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/resources/views/codeeditor.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/resources/views/post.blade.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/resources/views/layouts/layout.blade.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/app/Models/User.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/app/Models/Post.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/app/Http/Controllers/RepresentanteController.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/resources/views/layouts/guest.blade.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/resources/views/blog.blade.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/resources/views/posts/index.blade.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/database/migrations/migradas/2025_01_02_094221_add_timestamps_to_post_tag_table.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/resources/views/usuarios/index.blade.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/resources/views/posts/form.blade.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/resources/views/posts/update.blade.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/routes/web.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/resources/views/welcome.blade.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/app/Models/Cidade.php</file>
+            <file>file:/D:/Documentos/NetBeansProjects/FortMixOnline/app/Http/Controllers/HomeController.php</file>
         </group>
     </open-files>
 </project-private>

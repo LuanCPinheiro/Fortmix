@@ -8,8 +8,24 @@
         </title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+        <!-- Favicon padrão -->
+        <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+        <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+
+        <!-- Apple Touch Icon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+
+        <!-- Android Icons -->
+        <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="/img/favicon/android-chrome-512x512.png">
+
+        <!-- Web Manifest (Opcional: para definir cores e comportamento em dispositivos Android) -->
+        <link rel="manifest" href="/img/favicon/site.webmanifest">
+
+        <!-- Definir cor para a barra de navegação do navegador móvel (Android) -->
+        <meta name="theme-color" content="#ffffff">
+
         @yield('seo')
 
         @yield('ogcontent')
@@ -33,7 +49,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
+        <link href="css/style.css?v=7.5.2" rel="stylesheet">
         <script src="https://kit.fontawesome.com/a5cd35f078.js" crossorigin="anonymous"></script>
         @yield('headerfiles')
     </head>
@@ -84,6 +100,9 @@
                     <!--<a href="{{url('/produtos')}}" class="nav-item nav-link @yield('produtos')">Produtos</a>-->
                     <a href="{{url('/sobrenos')}}" class="nav-item nav-link @yield('sobrenos')">Sobre Nós</a>
                     <a href="{{url('/regioesAtendidas')}}" class="nav-item nav-link @yield('atendidas')">Regiões Atendidas</a>
+                    <a href="{{url('/produtoscorte')}}" class="nav-item nav-link @yield('produtoscorte')">Produtos Corte</a>
+                    <a href="{{url('/produtosleite')}}" class="nav-item nav-link @yield('produtosleite')">Produtos Leite</a>
+                    <a href="{{url('/blog')}}" class="nav-item nav-link @yield('blog')">Blog</a>
                     <!--<a href="{{url('/ondecomprar')}}" class="nav-item nav-link @yield('ondecomprar')">Onde Comprar</a>-->
                     <!--<a href="{{url('/clientes')}}" class="nav-item nav-link @yield('clientes')">Clientes</a>-->
                     <!--                    <div class="nav-item dropdown">
@@ -98,7 +117,7 @@
                                         </div>-->
                     <a href="{{url('/contato')}}" class="nav-item nav-link">Contato</a>
                 </div>
-                <a target="_blank" href="https://api.whatsapp.com/send?phone=5567981539267&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site." class="btn btn-primary px-3 d-none d-lg-block">Chamar no WhatsApp</a>
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=556784754883&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site." class="btn btn-primary px-3 d-none d-lg-block">Chamar no WhatsApp</a>
             </div>
         </nav>
         <!-- Navbar End -->
@@ -113,7 +132,7 @@
                         <h5 class="text-white mb-4">Matriz</h5>
                         <p class="mb-2"><a class="text-white" href="https://maps.app.goo.gl/XCUmRdKnPKZwANN96" target="_blank"><i class="fa fa-map-marker-alt me-3"></i>Avenida Adilson Romano Machado, 50 - Dist. Industrial, Cassilândia - MS, 79540-000</a></p>
                         <p class="mb-2"><a class="text-white" href="tel:+556735963498" target="_blank"><i class="fa fa-phone-alt me-3"></i>(67) 3596-3498</a></p>
-                        <p class="mb-2"><a class="text-white" href="https://api.whatsapp.com/send?phone=5567981539267&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site." target="_blank"><i class="fab fa-whatsapp me-3"></i>(67) 98153-9267</a></p>
+                        <p class="mb-2"><a class="text-white" href="https://api.whatsapp.com/send?phone=556784754883&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site." target="_blank"><i class="fab fa-whatsapp me-3"></i>(67) 8475-4883</a></p>
                         <p class="mb-2"><a class="text-white" href="mailto:contato@fortmixnutricao.com.br" target="_blank"><i class="fa fa-envelope me-3"></i>contato@fortmixnutricao.com</a></p>
                         <div class="d-flex pt-3">
                             <a target="_blank" class="btn btn-square btn-primary rounded-circle me-2" href="https://www.facebook.com/profile.php?id=100038898171234">
@@ -132,8 +151,9 @@
                         <a class="btn btn-link" href="{{url('/')}}">Início</a>
                         <a class="btn btn-link" href="{{url('/sobrenos')}}">Sobre Nós</a>
                         <a class="btn btn-link" href="{{url('/regioesAtendidas')}}">Regiões Atendidas</a>
-<!--                        <a class="btn btn-link" href="/produtos">Produtos</a>
-                        <a class="btn btn-link" href="/ondecomprar">Onde Comprar</a>-->
+                        <a class="btn btn-link" href="{{url('/blog')}}">Blog</a>
+                        <!--                        <a class="btn btn-link" href="/produtos">Produtos</a>
+                                                <a class="btn btn-link" href="/ondecomprar">Onde Comprar</a>-->
                         <!--<a class="btn btn-link" href="/clientes">Clientes</a>-->
                         <a class="btn btn-link" href="{{url('/contato')}}">Contato</a>
                         <a class="btn btn-link" href="{{url('/dashboard')}}">Área do Colaborador</a>
@@ -186,9 +206,9 @@
         <script src="lib/counterup/counterup.min.js"></script>
 
         <!-- Template Javascript -->
-        
+
         @yield('endfiles')
-        
+
         <script src="js/main.js"></script>
     </body>
 

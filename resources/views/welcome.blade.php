@@ -116,14 +116,14 @@ active
                     </div>
                 </div>
                 <div class="row pt-2">
-                    <a target="_blank" href="https://api.whatsapp.com/send?phone=5567981539267&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site." class="col-sm-6">
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=556784754883&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site." class="col-sm-6">
                         <div class="d-flex align-items-center">
                             <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
                                 <i class="fa-brands fa-whatsapp text-white"></i>
                             </div>
                             <div class="ms-3">
                                 <p class="mb-2">Nos chame no WhatsApp</p>
-                                <h5 class="mb-0">(67) 98153-9267</h5>
+                                <h5 class="mb-0">(67) 8475-4883</h5>
                             </div>
                         </div>
                     </a>
@@ -181,7 +181,7 @@ active
                 <i class="fa fa-check-double fa-3x text-white mb-3"></i>
                 <br/>
                 <span class="fs-5 fw-semi-bold text-white">E mais de</span>
-                <h1 class="display-2 text-secondary mb-0" data-toggle="counter-up">30</h1>
+                <h1 class="display-2 text-secondary mb-0" data-toggle="counter-up">40</h1>
                 <span class="fs-5 fw-semi-bold text-white">Produtos no<br/>Catálogo</span>
             </div>
         </div>
@@ -200,7 +200,7 @@ active
 <!--                            <span
                         class="position-absolute top-50 start-100 translate-middle bg-white rounded-circle d-none d-lg-block"
                         style="width: 120px; height: 120px;"></span>-->
-                    <a href="https://api.whatsapp.com/send?phone=5567981539267&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site." target="_blank" type="button" class="btn-play">
+                    <a href="https://api.whatsapp.com/send?phone=556784754883&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site." target="_blank" type="button" class="btn-play">
                         <span class="fa-brands fa-whatsapp text-white"></span>
                     </a>
                 </div>
@@ -507,7 +507,7 @@ active
 
 
 <!-- Testimonial Start -->
-<div class="container-xxl py-5">
+<!--<div class="container-xxl py-5">
     <div class="container">
         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
             <p class="fw-medium text-uppercase text-primary mb-2">Depoimentos</p>
@@ -561,6 +561,6 @@ active
             </div>
         </div>
     </div>
-</div>
+</div>-->
 <!-- Testimonial End -->
 @endsection

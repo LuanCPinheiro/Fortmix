@@ -18,6 +18,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <link rel="apple-touch-icon" sizes="76x76" href="{{url('dashboardAssets/assets/img/apple-icon.png')}}">
         <link rel="icon" type="image/png" href="{{url('dashboardAssets/assets/img/favicon.png')}}">
         <title>
@@ -69,12 +70,50 @@
                     <li class="nav-item">
                         <a class="nav-link @yield('active3')" href="{{url('dashboard/regioesatendidas')}}">
                             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                                <i class="ni ni-pin-3 text-dark text-sm opacity-10"></i>
+                                <i class="ni ni-box-2 text-dark text-sm opacity-10"></i>
                             </div>
                             <span class="nav-link-text ms-1">Regiões Atendidas</span>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#postsMenu" role="button" aria-expanded="false" aria-controls="postsMenu">
+                            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                                <i class="ni ni-bullet-list-67 text-dark text-sm opacity-10"></i>
+                            </div>
+                            <span class="nav-link-text ms-1">Posts</span>
+                        </a>
+                        <div class="collapse" id="postsMenu">
+                            <ul class="nav ms-4">
+                                <li class="nav-item">
+                                    <a class="nav-link @yield('active11')" href="{{ url('dashboard/posts') }}">
+                                        <i class="ni ni-bullet-list-67 text-dark text-sm"></i>
+                                        <span class="nav-link-text ms-1">Lista de Posts</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link @yield('active12')" href="{{ url('dashboard/tags') }}">
+                                        <i class="ni ni-tag text-dark text-sm"></i>
+                                        <span class="nav-link-text ms-1">Tags</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+
                     @endif
+
+                    @if(Auth::user()->onlySuper())
+                    <li class="nav-item">
+                        <a class="nav-link @yield('active10')" href="{{url('dashboard/produtos')}}">
+                            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                                <i class="ni ni-pin-3 text-dark text-sm opacity-10"></i>
+                            </div>
+                            <span class="nav-link-text ms-1">Produtos</span>
+                        </a>
+                    </li>            
+                    @endif
+
                     @if(Auth::user()->isAdmin())
                     <li class="nav-item">
                         <a class="nav-link @yield('active4')" href="{{url('dashboard/usuarios')}}">
@@ -84,58 +123,65 @@
                             <span class="nav-link-text ms-1">Usuários</span>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#produtosMenu" role="button" aria-expanded="false" aria-controls="produtosMenu">
+                            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                                <i class="ni ni-box-2 text-dark text-sm opacity-10"></i>
+                            </div>
+                            <span class="nav-link-text ms-1">Produtos</span>
+                        </a>
+                        <div class="collapse" id="produtosMenu">
+                            <ul class="nav ms-4">
+                                <!-- Link direto para Produtos -->
+                                <li class="nav-item">
+                                    <a class="nav-link @yield('active10')" href="{{ url('dashboard/produtos') }}">
+                                        <i class="ni ni-box-2 text-dark text-sm"></i>
+                                        <span class="nav-link-text ms-1">Todos os Produtos</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link @yield('active5')" href="{{ url('dashboard/pecuarias') }}">
+                                        <i class="ni ni-collection text-dark text-sm"></i>
+                                        <span class="nav-link-text ms-1">Pecuárias</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link @yield('active6')" href="{{ url('dashboard/familias') }}">
+                                        <i class="ni ni-archive-2 text-dark text-sm"></i>
+                                        <span class="nav-link-text ms-1">Famílias</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link @yield('active7')" href="{{ url('dashboard/periodos') }}">
+                                        <i class="ni ni-calendar-grid-58 text-dark text-sm"></i>
+                                        <span class="nav-link-text ms-1">Períodos</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link @yield('active8')" href="{{ url('dashboard/estagios') }}">
+                                        <i class="ni ni-chart-bar-32 text-dark text-sm"></i>
+                                        <span class="nav-link-text ms-1">Estágio Animal</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link @yield('active9')" href="{{ url('dashboard/nutrientes') }}">
+                                        <i class="ni ni-atom text-dark text-sm"></i>
+                                        <span class="nav-link-text ms-1">Nutrientes</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#bibliotecaModal">
+                            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                                <i class="ni ni-album-2 text-dark text-sm opacity-10"></i>
+                            </div>
+                            <span class="nav-link-text ms-1">Biblioteca</span>
+                        </a>
+                    </li>
+
                     @endif
-                    <!--                    <li class="nav-item">
-                                            <a class="nav-link " href="{{url('dashboardAssets/pages/tables.html')}}">
-                                                <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                                                    <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
-                                                </div>
-                                                <span class="nav-link-text ms-1">Tables</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link " href="{{url('dashboardAssets/pages/billing.html')}}">
-                                                <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                                                    <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
-                                                </div>
-                                                <span class="nav-link-text ms-1">Billing</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link " href="{{url('dashboardAssets/pages/virtual-reality.html')}}">
-                                                <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                                                    <i class="ni ni-app text-info text-sm opacity-10"></i>
-                                                </div>
-                                                <span class="nav-link-text ms-1">Virtual Reality</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link " href="{{url('dashboardAssets/pages/rtl.html')}}">
-                                                <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                                                    <i class="ni ni-world-2 text-danger text-sm opacity-10"></i>
-                                                </div>
-                                                <span class="nav-link-text ms-1">RTL</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item mt-3">
-                                            <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link " href="{{url('dashboardAssets/pages/sign-in.html')}}">
-                                                <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                                                    <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
-                                                </div>
-                                                <span class="nav-link-text ms-1">Sign In</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link " href="{{url('dashboardAssets/pages/sign-up.html')}}">
-                                                <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                                                    <i class="ni ni-collection text-info text-sm opacity-10"></i>
-                                                </div>
-                                                <span class="nav-link-text ms-1">Sign Up</span>
-                                            </a>
-                                        </li>-->
                 </ul>
             </div>
         </aside>
@@ -202,6 +248,34 @@
             <div class="container-fluid py-4">
                 @yield('content')
             </div>
+            <div class="modal fade" id="bibliotecaModal" tabindex="-1" aria-labelledby="bibliotecaModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="bibliotecaModalLabel">Biblioteca de Imagens</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Upload -->
+                            <div class="mb-3">
+                                <input type="file" id="uploadFile" class="form-control">
+                                <button id="uploadButton" class="btn btn-success mt-2">Fazer Upload</button>
+                            </div>
+
+                            <!-- Galeria -->
+                            <div id="bibliotecaGrid" class="row g-3">
+                                <!-- Os itens serão carregados aqui via AJAX -->
+                            </div>
+
+                            <!-- Botão "Carregar Mais" -->
+                            <div class="text-center mt-3">
+                                <button id="loadMoreButton" class="btn btn-primary">Carregar Mais</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </main>
         <div class="fixed-plugin">
             <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
@@ -358,7 +432,74 @@
         <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
         <script src="{{url('dashboardAssets/assets/js/argon-dashboard.min.js?v=2.0.4')}}"></script>
         <script src="{{url('dashboardAssets/assets/js/jquery.js?v=2.0.4')}}"></script>
+
         @yield('endfiles')
+
+
+        <script>
+            function copyToClipboard(url) {
+                navigator.clipboard.writeText(url)
+                        .then(() => {
+                            alert('URL copiada para a área de transferência!');
+                        })
+                        .catch(err => {
+                            alert('Erro ao copiar URL: ' + err);
+                        });
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                const uploadButton = document.getElementById('uploadButton');
+                const uploadFile = document.getElementById('uploadFile');
+                const bibliotecaGrid = document.getElementById('bibliotecaGrid');
+
+                // Função para obter a URL base do site
+                function getBaseUrl() {
+                    return `${window.location.origin}/dashboard`;
+                }
+
+                function loadBiblioteca() {
+                    fetch(`${getBaseUrl()}/biblioteca`)
+                            .then(response => response.json())
+                            .then(data => {
+                                bibliotecaGrid.innerHTML = data.map(item => `
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="/storage/${item.url}" class="card-img-top" alt="${item.alt}">
+                            <div class="card-body">
+                                <p class="card-text">${item.nome}</p>
+                                <button class="btn btn-primary btn-sm" onclick="copyToClipboard('https://fortmixnutricao.com.br/storage/${item.url}')">
+                                    Copiar URL
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+                            });
+                }
+
+                uploadButton.addEventListener('click', function () {
+                    const formData = new FormData();
+                    formData.append('file', uploadFile.files[0]);
+
+                    fetch(`${getBaseUrl()}/biblioteca/upload`, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+                        },
+                    })
+                            .then(response => response.json())
+                            .then(data => {
+                                alert('Arquivo enviado com sucesso!');
+                                loadBiblioteca();
+                            })
+                            .catch(error => alert('Erro ao enviar arquivo.'));
+                });
+
+                // Load initial items
+                loadBiblioteca();
+            });
+
+        </script>
     </body>
 
 </html>
